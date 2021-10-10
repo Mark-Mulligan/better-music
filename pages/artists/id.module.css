@@ -1,0 +1,36 @@
+.page {
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backgroundImage {
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 15px;
+  margin: auto;
+  background: rgba(10, 10, 10, 0.9);
+  color: rgb(245, 245, 245);
+}
+
+.container h1 {
+  margin-top: 0;
+}
+
+.container p {
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.videoWrapper {
+  max-width: 800px;
+  margin: auto;
+}
