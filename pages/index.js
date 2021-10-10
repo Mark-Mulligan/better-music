@@ -4,36 +4,42 @@ import styles from './Home.module.css';
 
 const artistList = [
   {
+    id: 1,
     name: 'Jordan Rakei',
     genre: 'R&B/Soul',
     src: '/jordan-rakei-profile.jpg',
     alt: 'Jordan Rakei Profile Picture',
   },
   {
+    id: 2,
     name: 'Tom Misch',
     genre: 'Pop',
     src: '/tom-misch-profile.jpg',
     alt: 'Tom Misch Profile Picture',
   },
   {
+    id: 3,
     name: 'Yussef Dayes',
     genre: 'Jazz',
     src: '/yussef-dayes-profile.jpg',
     alt: 'Yussef Dayes Profile Picture',
   },
   {
+    id: 4,
     name: 'Lawerence',
     genre: 'Pop',
     src: '/lawerence.jpg',
     alt: 'Clyde and Gracie Lawerence',
   },
   {
+    id: 5,
     name: 'Hiatus Kaiyote',
     genre: 'R&B/Soul',
     src: '/hiatus-kaiyote-profile.jpg',
     alt: 'Hiatus Kaiyote Profile Picture',
   },
   {
+    id: 6,
     name: 'Snarky Puppy',
     genre: 'Rock/Jazz/Funk',
     src: '/snarky-puppy-profile.jpg',
@@ -62,7 +68,13 @@ export default function Home() {
             {artistList.map((artist, index) => {
               return (
                 <li key={`artist-${index}`}>
-                  <ArtistCard name={artist.name} genre={artist.genre} src={artist.src} alt={artist.alt} />
+                  <ArtistCard
+                    name={artist.name}
+                    id={artist.id}
+                    genre={artist.genre}
+                    src={artist.src}
+                    alt={artist.alt}
+                  />
                 </li>
               );
             })}
