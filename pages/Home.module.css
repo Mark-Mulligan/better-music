@@ -1,0 +1,46 @@
+.heroSection {
+  background: lightblue;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroSection h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.artistSection {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: lightgray;
+}
+
+.artistSection h2 {
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+.artistCardsContainer {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+@media (max-width: 1000px) {
+  .artistCardsContainer {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .artistCardsContainer {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
