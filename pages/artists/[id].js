@@ -48,6 +48,9 @@ const ArtistPage = () => {
           <div className={styles.videoWrapper}>
             <YoutubeEmbed embedId={'JtBmUxz4GsM'} />
           </div>
+          <a href="https://www.apple.com/apple-music/" target="_blank" rel="noreferrer">
+            <Image src="/appleMusic.svg" alt="apple music link" height={100} width={100} />
+          </a>
         </div>
       </div>
     </main>

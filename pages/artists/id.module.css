@@ -21,7 +21,8 @@
   overflow: hidden;
   z-index: 1;
   max-width: 1000px;
-  padding: 20px;
+  padding: 30px;
+  padding-bottom: 50px;
   border-radius: 15px;
   margin-left: auto;
   margin-right: auto;
@@ -35,10 +36,11 @@
 
 .container p {
   text-align: justify;
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 .videoWrapper {
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
+  margin-top: 3rem;
 }
