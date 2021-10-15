@@ -44,3 +44,16 @@
   margin: auto;
   margin-top: 3rem;
 }
+
+.linksContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.linksContainer a {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
