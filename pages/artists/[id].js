@@ -48,23 +48,37 @@ const ArtistPage = () => {
           <div className={styles.videoWrapper}>
             <YoutubeEmbed embedId={'JtBmUxz4GsM'} />
           </div>
-          <div className={styles.linksContainer}>
-            <a href="https://www.apple.com/apple-music/" target="_blank" rel="noreferrer">
-              <Image src="/appleMusic.svg" alt="apple music link" height={100} width={100} />
-            </a>
+          <ul className={styles.linksContainer}>
+            <li>
+              <a href="https://www.apple.com/apple-music/" target="_blank" rel="noreferrer">
+                <Image src="/appleMusic.svg" alt="apple music link" height={75} width={75} />
+              </a>
+            </li>
 
-            <a href="https://www.spotify.com/us/" target="_blank" rel="noreferrer">
-              <Image src="/spotify.svg" alt="spotify link" height={80} width={80} />
-            </a>
+            <li>
+              <a href="https://www.spotify.com/us/" target="_blank" rel="noreferrer">
+                <Image src="/spotify.svg" alt="spotify link" height={60} width={60} />
+              </a>
+            </li>
 
-            <a href="https://play.google.com/store?hl=en_US&gl=US" target="_blank" rel="noreferrer">
-              <Image src="/googlePlay.svg" alt="google play link" height={80} width={80} />
-            </a>
+            <li>
+              <a href="https://play.google.com/store?hl=en_US&gl=US" target="_blank" rel="noreferrer">
+                <Image src="/googlePlay.svg" alt="google play link" height={60} width={60} />
+              </a>
+            </li>
 
-            <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
-              <Image src="/youtube.svg" alt="youtube link" height={90} width={90} />
-            </a>
-          </div>
+            <li>
+              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
+                <Image src="/youtube.svg" alt="youtube link" height={70} width={75} />
+              </a>
+            </li>
+
+            <li>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                <Image src="/instagram.svg" alt="instagram logo" height={58} width={58} />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </main>

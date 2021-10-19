@@ -43,15 +43,27 @@
   max-width: 1000px;
   margin: auto;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .linksContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
 }
 
-.linksContainer a {
+@media (max-width: 600px) {
+  .linksContainer {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .linksContainer {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+.linksContainer li {
   height: 100px;
   display: flex;
   align-items: center;
