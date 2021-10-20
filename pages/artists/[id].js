@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useRouter } from 'next/dist/client/router';
 import Image from 'next/image';
+import Link from 'next/link';
 import YoutubeEmbed from '../../components/YoutubeEmbed';
 import styles from './id.module.css';
 
@@ -22,6 +23,18 @@ const ArtistPage = () => {
       />
       <div className={styles.wrapper}>
         <div className={styles.container}>
+          {/* <Link>
+            <div className={styles.backArrow}>
+              <Image src="/white-left-arrow.svg" alt="Back to home page" height={40} width={40} />
+            </div>
+          </Link> */}
+
+          <Link href="/">
+            <a className={styles.backArrow}>
+              <Image src="/white-left-arrow.svg" alt="Back to home page" height={38} width={38} />
+            </a>
+          </Link>
+
           <h1>Jordan Rakei</h1>
           <p>
             A soul-rooted alternative R&B artist who sings, writes, and produces, London-based Jordan Rakei debuted in
