@@ -23,12 +23,6 @@ const ArtistPage = () => {
       />
       <div className={styles.wrapper}>
         <div className={styles.container}>
-          {/* <Link>
-            <div className={styles.backArrow}>
-              <Image src="/white-left-arrow.svg" alt="Back to home page" height={40} width={40} />
-            </div>
-          </Link> */}
-
           <Link href="/">
             <a className={styles.backArrow}>
               <Image src="/white-left-arrow.svg" alt="Back to home page" height={38} width={38} />
