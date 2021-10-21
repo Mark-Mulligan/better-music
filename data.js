@@ -74,6 +74,76 @@ export const artistPageInfo = {
       Yussef’s first solo release - 2019 is set to be his busiest year yet, with a debut solo album in the pipeline as well as collaborative projects across the board.`,
     ],
   },
+  lawerence: {
+    id: 'lawerence',
+    name: 'Lawerence',
+    genre: 'Pop',
+    profileSrc: '/images/lawerence-profile.jpg',
+    profileAlt: 'Clyde and Gracie Lawerence',
+    backgroundSrc: '/images/lawerence-background.jpg',
+    backgroundAlt: 'Lawerence on stage',
+    youTubeId: 'C01nBm6vV5c',
+    bio: [
+      `As NPR writes, “siblings Clyde and Gracie Lawrence are not your typical pair." Clyde Lawrence and Gracie Lawrence have been 
+      writing songs and listening to countless Stevie Wonder, Randy Newman, and Aretha Franklin records in their family's New York 
+      City apartment since they were little kids. After years of playing together, they officially created Lawrence, an eight-piece 
+      soul-pop band comprised of musician friends from childhood and college. The band has since gained a devoted following for its high-energy, 
+      keyboard-driven sound, which features tight, energetic horns, explosive lead vocals, and fully-live arrangements.`,
+      `Lawrence first rose to prominence in 2016 when they released their debut LP Breakfast (2016), which received attention and 
+      praise from a variety of sources ranging from NPR's All Things Considered to Stephen Curry's social media. Produced by Grammy 
+      Award winner Eric Krasno (Lettuce/Tedeschi Trucks/Soulive), Breakfast includes guest performances by NYC soul/funk mainstays 
+      Adam Deitch (Lettuce), Cory Henry (Cory Henry & the Funk Apostles, Snarky Puppy), and Maurice "Mobetta" Brown (Anderson . Paak, Tedeschi Trucks Band).`,
+      `Lawrence has sold out headline shows across the country and appeared at festivals including Bonnaroo, Outside Lands, Firefly, 
+      Okeechobee, Hangout, and many more. The band has also opened for notable acts such as Lake Street Dive, Vulfpeck, Jon Bellion, 
+      Soulive, Jacob Collier, Blues Traveler, O.A.R, Bernhoft, and others.`,
+      `In addition to the band, Clyde and Gracie have also amassed considerable resumes with other artistic pursuits. 
+      Clyde has written songs and score for film and television, including Disney's Noelle (2019), Steven Spielberg's 
+      Animaniacs (2020), Landline (2017), The Rewrite (2015), Music and Lyrics (2007), and even Miss Congeniality (2000), 
+      for which he wrote the theme song at age five. Gracie is an accomplished actress, appearing as a series regular alongside 
+      John Caroll Lynch, Leslie Odom Jr., and Sturgill Simpson in the CBS All-Access murder mystery One Dollar. Gracie has also 
+      appeared on Broadway in Brighton Beach Memoirs (2009), in films such as The Sitter (2011) and Did You Hear About the Morgans? 
+      (2009), and in tv shows including The Good Wife (2012), The Americans (2014), and Younger (2015).`,
+    ],
+  },
+  'hiatus-kaiyote': {
+    id: 'hiatus-kaiyote',
+    name: 'Hiatus Kaiyote',
+    genre: 'R&B/Soul',
+    profileSrc: '/images/hiatus-kaiyote-profile.jpg',
+    profileAlt: 'Hiatus Kaiyote Profile Picture',
+    backgroundSrc: '/images/hiatus-kaiyote-background.jpeg',
+    backgroundAlt: 'All members of the band Hiatus Kaiyote',
+    youTubeId: 'ghw26g3h6L0',
+    bio: [
+      `Hiatus Kaiyote are a 4-piece independent future soul group based in Melbourne, performing on occasion with 3 additional backing singers. 
+    Their sound is a fusion of future beats, hip-hop and soul with subtler influences of Latin, dubstep and opera`,
+      `Hiatus Kaiyote came onto the scene with their debut album, Tawk Tomahawk, back in 2012 and created a groundswell of buzz among global music heads. 
+    Since then, they've gone on to win varying international awards and were the first Australian group to get nominated in the R&B category at the 
+    Grammys for best R&B performance in 2013. This uber-fun and exhilarating set will appease diehards and new fans alike.`,
+    ],
+  },
+  'snarky-puppy': {
+    id: 'snarky-puppy',
+    name: 'Snarky Puppy',
+    genre: 'Rock/Jazz/Funk',
+    profileSrc: '/images/snarky-puppy-profile.jpg',
+    profileAlt: 'Snarky Puppy Profile Picture',
+    backgroundSrc: '/images/snarky-puppy-background.jpeg',
+    backgroundAlt: 'Snarky Puppy',
+    youTubeId: 'L_XJ_s5IsQc',
+    bio: [
+      `After a decade of relentless touring and recording in all but complete obscurity, the Texas-bred/New York-based 
+    quasi-collective suddenly found itself held up by the press and public as one of the major figures in the jazz world. 
+    “An exultant throwdown of smart danceability” (Village Voice), Snarky Puppy isn’t exactly a jazz band. 
+    It’s not a fusion band, and it’s definitely not a jam band. It’s probably best to take Nate Chinen of The New York Times’ 
+    advice, as stated in an online discussion about the group, to “take them for what they are, rather than judge them for what they’re not.”`,
+      `The global collective which features a revolving cast of up to a dozen musicians makes what it likes to call “music for your brain and booty.” 
+      Led by bassist and composer Michael League, the band's rotating lineup features musicians whose résumés boast work with stars like Erykah Badu, 
+      Marcus Miller, Justin Timberlake, Roy Hargrove, Snoop Dogg and John Mayer. Their 2017 release, Culcha Vulcha, won a GRAMMY for Best Contemporary 
+      Instrumental Album, and 2019 saw the release of the studio session Immigrance. 2020’s double-disc release Live at the Royal Albert Hall, 
+      recorded in London during the Immigrance tour, won the band a well-deserved Best Contemporary Instrumental Album nod at the 2021 GRAMMYs.`,
+    ],
+  },
 };
 
 export const getArtistPathParams = () => {
