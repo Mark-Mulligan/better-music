@@ -1,7 +1,12 @@
 export const artistPageInfo = {
   'jordan-rakei': {
+    id: 'jordan-rakei',
     name: 'Jordan Rakei',
     genre: 'R&B/Soul',
+    profileSrc: '/images/jordan-rakei-profile.jpg',
+    profileAlt: 'Jordan Rakei Profile Picture',
+    backgroundSrc: '/images/jordan-rakei-background.jpg',
+    backgroundAlt: 'Jordan Rakei on stage',
     youTubeId: 'JtBmUxz4GsM',
     bio: [
       `A soul-rooted alternative R&B artist who sings, writes, and produces, London-based Jordan Rakei 
@@ -24,6 +29,59 @@ export const artistPageInfo = {
       2021, preceded by the track "Family."`,
     ],
   },
+  'tom-misch': {
+    id: 'tom-misch',
+    name: 'Tom Misch',
+    genre: 'Pop',
+    profileSrc: '/images/tom-misch-profile.jpg',
+    profileAlt: 'Tom Misch Profile Picture',
+    backgroundSrc: '/images/tom-misch-background.jpeg',
+    backgroundAlt: 'Tom Misch on stage',
+    youTubeId: 'IUMTaAQ43lY',
+    bio: [
+      `London-based producer/singer/songwriter Tom Misch blends hip-hop-inspired beats with smoothly soulful vocals and guitar.`,
+      `The son of an artist and a psychiatrist, Misch grew up in a home that encouraged creativity, and learned to play violin at a 
+      young age via the Suzuki method. While he was still a child, his family also discovered Misch could sing when he belted out Patrick Watson's 
+      "Man Like You" one day after school. After listening to rock music for most of his childhood and teens, he discovered hip-hop during his sixth 
+      form years thanks to one of his sister's boyfriends, and was particularly inspired by the work of J Dilla. Misch started making his own beats 
+      and took classes in music technology, and began posting tracks online in 2012. Up-and-coming rappers sampled his beats in their own work, 
+      and Misch also collaborated with local singer/songwriter Carmody, ultimately releasing the Out to Sea EP with her in 2014. That year, he also 
+      issued Beat Tape 1, a collection of instrumental tracks that included "Dilla Love," an homage to his idol that earned approval from Dilla's mother, 
+      Maureen Yancey. "Memory," Misch's debut single on his own Beyond the Groove label, arrived that July.`,
+      `The following year, Beat Tape 2 arrived, this time featuring collaborations with vocalists including Carmody, Loyle Carner, and Zak Abel. 
+      On his 2016 EP Reverie, Misch blended the different aspects of his music into laid-back, R&B-tinged pop, and took the lead vocal on several tracks. 
+      He returned in 2017 with the single "South of the River" and the 5-Day Mischon EP, a set of five songs recorded in five days that featured contributions 
+      from Carmody, Novelist, Will Heard, Kaidi Akinnibi, and Tobie Tripp. He also collaborated with Carner on his 2017 single "Damselfly." 
+      The following year, Misch delivered his debut full-length album, Geography, featuring the singles "Movie" and "Lost in Paris." What Kinda Music, 
+      a collaboration with Yussef Dayes, arrived in April 2020 and included the spotlight track "Kyiv."`,
+    ],
+  },
+  'yussef-dayes': {
+    id: 'yussef-dayes',
+    name: 'Yussef Dayes',
+    genre: 'Jazz',
+    profileSrc: '/images/yussef-dayes-profile.jpg',
+    profileAlt: 'Yussef Dayes Profile Picture',
+    backgroundSrc: '/images/yussef-dayes-background.jpeg',
+    backgroundAlt: 'Yussef Dayes on stage',
+    youTubeId: '1g826StJhLk',
+    bio: [
+      `Yussef Dayes is one of the UK’s most exciting, innovative young drummers and producers. Though largely considered a 
+      “jazz” drummer, his sound melds everything from 70s funk to Senegalese percussion to recent UK grime. The unifying factor is a fluid, vital energy.`,
+      `Growing up in South East London, Yussef began his musician journey listening to his dad’s jazz records, and performing with his brothers from age 4. 
+      He’s gone on to study with the legendary Billy Cobham, and began regular gigging with his brothers in afrobeat and rock-influenced jazz outfit United Vibrations. 
+      He is also known for his collaboration with Kamaal Williams, creating the duet Yussef Kamaal in 2015. Following 2018’s ‘Love Is The Message’ - 
+      Yussef’s first solo release - 2019 is set to be his busiest year yet, with a debut solo album in the pipeline as well as collaborative projects across the board.`,
+    ],
+  },
+};
+
+export const getArtistPathParams = () => {
+  let paths = [];
+  for (const artist in artistPageInfo) {
+    paths.push({ params: { id: artist } });
+  }
+  return paths;
 };
 
 export const getArtistInfo = (artistId) => {

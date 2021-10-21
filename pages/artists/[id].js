@@ -1,13 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useRouter } from 'next/dist/client/router';
 import Image from 'next/image';
 import Link from 'next/link';
 import YoutubeEmbed from '../../components/YoutubeEmbed';
 import styles from './id.module.css';
-import { getArtistInfo } from '../../data';
+import { getArtistInfo, getArtistPathParams } from '../../data';
 
 const ArtistPage = (props) => {
-  const { name, genre, youTubeId, bio } = props;
+  const { name, youTubeId, bio, backgroundSrc, backgroundAlt } = props;
 
   if (!bio) {
     return <div>Not found</div>;
@@ -17,8 +16,8 @@ const ArtistPage = (props) => {
     <main className={styles.page}>
       <Image
         className={styles.backgroundImage}
-        src="/jordan-rakei-background.jpg"
-        alt="Picture of Jordan Rakei"
+        src={backgroundSrc}
+        alt={backgroundAlt}
         layout="fill"
         objectFit="cover"
         objectPosition="center"
@@ -27,7 +26,7 @@ const ArtistPage = (props) => {
         <div className={styles.container}>
           <Link href="/">
             <a className={styles.backArrow}>
-              <Image src="/white-left-arrow.svg" alt="Back to home page" height={38} width={38} />
+              <Image src="/icons/white-left-arrow.svg" alt="Back to home page" height={38} width={38} />
             </a>
           </Link>
 
@@ -43,31 +42,31 @@ const ArtistPage = (props) => {
           <ul className={styles.linksContainer}>
             <li>
               <a href="https://www.apple.com/apple-music/" target="_blank" rel="noreferrer">
-                <Image src="/appleMusic.svg" alt="apple music link" height={75} width={75} />
+                <Image src="/icons/appleMusic.svg" alt="apple music link" height={75} width={75} />
               </a>
             </li>
 
             <li>
               <a href="https://www.spotify.com/us/" target="_blank" rel="noreferrer">
-                <Image src="/spotify.svg" alt="spotify link" height={60} width={60} />
+                <Image src="/icons/spotify.svg" alt="spotify link" height={60} width={60} />
               </a>
             </li>
 
             <li>
               <a href="https://play.google.com/store?hl=en_US&gl=US" target="_blank" rel="noreferrer">
-                <Image src="/googlePlay.svg" alt="google play link" height={60} width={60} />
+                <Image src="/icons/googlePlay.svg" alt="google play link" height={60} width={60} />
               </a>
             </li>
 
             <li>
               <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
-                <Image src="/youtube.svg" alt="youtube link" height={70} width={75} />
+                <Image src="/icons/youtube.svg" alt="youtube link" height={70} width={75} />
               </a>
             </li>
 
             <li>
               <a href="https://instagram.com" target="_blank" rel="noreferrer">
-                <Image src="/instagram.svg" alt="instagram logo" height={58} width={58} />
+                <Image src="/icons/instagram.svg" alt="instagram logo" height={58} width={58} />
               </a>
             </li>
           </ul>
@@ -87,26 +86,25 @@ export async function getStaticProps(context) {
     };
   }
 
-  const { name, genre, youTubeId, bio } = artistData;
+  const { name, youTubeId, bio, backgroundSrc, backgroundAlt } = artistData;
 
   return {
     props: {
       name,
-      genre,
       youTubeId,
       bio,
+      backgroundSrc,
+      backgroundAlt,
     },
     revalidate: 60000,
   };
 }
 
 export async function getStaticPaths() {
+  const paths = getArtistPathParams();
+
   return {
-    paths: [
-      {
-        params: { id: 'jordan-rakei' },
-      },
-    ],
+    paths: paths,
     fallback: false,
   };
 }
