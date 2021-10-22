@@ -5,12 +5,29 @@ import { getArtistInfoForHome } from '../data';
 import styles from './Home.module.css';
 
 export default function Home({ artistList }) {
-  const [unfilteredArtists, setUnfilteredArtists] = useState(artistList);
   const [filteredArtists, setFilteredArtists] = useState(artistList);
   const [searchInput, setSearchInput] = useState('');
 
   const onSearchChange = (e) => {
     setSearchInput(e.target.value);
+
+    if (!e.target.value) {
+      setFilteredArtists(artistList);
+    } else {
+      let search = e.target.value.toLowerCase();
+      let result = [];
+
+      artistList.forEach((artist) => {
+        let artistName = artist.name.toLowerCase();
+        let artistGenre = artist.genre.toLowerCase();
+
+        if (artistName.includes(search) || artistGenre.includes(search)) {
+          result.push(artist);
+        }
+      });
+
+      setFilteredArtists(result);
+    }
   };
 
   return (
@@ -38,6 +55,7 @@ export default function Home({ artistList }) {
                 className={styles.formField}
                 name="artistSearch"
                 id="artistSearch"
+                required
               />
               <label htmlFor="artistSearch" className={styles.formLabel}>
                 Search Artists

@@ -73,7 +73,23 @@
   font-weight: 700;
 }
 
+.formField:valid + .formLabel {
+  top: -13px;
+  left: 0;
+  font-size: 0.9rem;
+  color: #11998e;
+  font-weight: 700;
+}
+
 .formField:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+
+.formField:valid {
   padding-bottom: 6px;
   font-weight: 700;
   border-width: 3px;
@@ -90,6 +106,7 @@
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   column-gap: 30px;
   row-gap: 30px;
+  min-height: 100vh;
 }
 
 @media (max-width: 1000px) {
