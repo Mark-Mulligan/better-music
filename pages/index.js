@@ -1,54 +1,18 @@
 import Head from 'next/head';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import ArtistCard from '../components/ArtistCard';
+import { getArtistInfoForHome } from '../data';
 import styles from './Home.module.css';
 
-const artistList = [
-  {
-    id: 'jordan-rakei',
-    name: 'Jordan Rakei',
-    genre: 'R&B/Soul',
-    src: '/images/jordan-rakei-profile.jpg',
-    alt: 'Jordan Rakei Profile Picture',
-  },
-  {
-    id: 'tom-misch',
-    name: 'Tom Misch',
-    genre: 'Pop',
-    src: '/images/tom-misch-profile.jpg',
-    alt: 'Tom Misch Profile Picture',
-  },
-  {
-    id: 'yussef-dayes',
-    name: 'Yussef Dayes',
-    genre: 'Jazz',
-    src: '/images/yussef-dayes-profile.jpg',
-    alt: 'Yussef Dayes Profile Picture',
-  },
-  {
-    id: 'lawerence',
-    name: 'Lawerence',
-    genre: 'Pop',
-    src: '/images/lawerence-profile.jpg',
-    alt: 'Clyde and Gracie Lawerence',
-  },
-  {
-    id: 'hiatus-kaiyote',
-    name: 'Hiatus Kaiyote',
-    genre: 'R&B/Soul',
-    src: '/images/hiatus-kaiyote-profile.jpg',
-    alt: 'Hiatus Kaiyote Profile Picture',
-  },
-  {
-    id: 'snarky-puppy',
-    name: 'Snarky Puppy',
-    genre: 'Rock/Jazz/Funk',
-    src: '/images/snarky-puppy-profile.jpg',
-    alt: 'Snarky Puppy Profile Picture',
-  },
-];
+export default function Home({ artistList }) {
+  const [unfilteredArtists, setUnfilteredArtists] = useState(artistList);
+  const [filteredArtists, setFilteredArtists] = useState(artistList);
+  const [searchInput, setSearchInput] = useState('');
 
-export default function Home() {
+  const onSearchChange = (e) => {
+    setSearchInput(e.target.value);
+  };
+
   return (
     <Fragment>
       <Head>
@@ -65,16 +29,32 @@ export default function Home() {
         <section className={styles.artistSection}>
           <h2>Artists</h2>
 
+          <div className={styles.searchContainer}>
+            <div className={styles.formGroup}>
+              <input
+                value={searchInput}
+                onChange={onSearchChange}
+                type="input"
+                className={styles.formField}
+                name="artistSearch"
+                id="artistSearch"
+              />
+              <label htmlFor="artistSearch" className={styles.formLabel}>
+                Search Artists
+              </label>
+            </div>
+          </div>
+
           <ul className={styles.artistCardsContainer}>
-            {artistList.map((artist, index) => {
+            {filteredArtists.map((artist, index) => {
               return (
                 <li key={`artist-${index}`}>
                   <ArtistCard
                     name={artist.name}
                     id={artist.id}
                     genre={artist.genre}
-                    src={artist.src}
-                    alt={artist.alt}
+                    src={artist.profileSrc}
+                    alt={artist.profileAlt}
                   />
                 </li>
               );
@@ -84,4 +64,19 @@ export default function Home() {
       </main>
     </Fragment>
   );
+}
+
+export async function getStaticProps() {
+  const artistList = getArtistInfoForHome();
+
+  if (!artistList) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: { artistList },
+    revalidate: 60000,
+  };
 }

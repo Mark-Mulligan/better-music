@@ -154,6 +154,15 @@ export const getArtistPathParams = () => {
   return paths;
 };
 
+export const getArtistInfoForHome = () => {
+  let artistList = [];
+  for (const artist in artistPageInfo) {
+    const { id, name, genre, profileSrc, profileAlt } = artistPageInfo[artist];
+    artistList.push({ id, name, genre, profileSrc, profileAlt });
+  }
+  return artistList;
+};
+
 export const getArtistInfo = (artistId) => {
   return artistPageInfo[artistId];
 };
