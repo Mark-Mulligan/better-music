@@ -97,6 +97,12 @@
   border-image-slice: 1;
 }
 
+.artistOrderContainer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 30px;
+}
+
 .artistCardsContainer {
   max-width: 1200px;
   padding-left: 15px;

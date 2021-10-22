@@ -14,7 +14,7 @@
 .cardBody {
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .cardBody h4 {
@@ -26,24 +26,4 @@
 .cardBody p {
   font-size: 1.2rem;
   font-weight: 200;
-}
-
-.button {
-  display: block;
-  padding: 0.4em 1.2em;
-  border: 0.1em solid rgb(14, 14, 14);
-  background: rgba(14, 14, 14);
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 0.12em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-weight: 300;
-  font-size: 1.1rem;
-  color: rgb(245, 245, 245);
-  text-align: center;
-  transition: all 0.2s;
-}
-
-.button:hover {
-  background-color: rgb(40, 40, 40);
 }

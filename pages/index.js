@@ -1,34 +1,40 @@
 import Head from 'next/head';
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useEffect, useCallback } from 'react';
 import ArtistCard from '../components/ArtistCard';
 import { getArtistInfoForHome } from '../data';
+import { sortArtistAlphabetically, filterArtistList } from '../util/utils';
 import styles from './Home.module.css';
 
 export default function Home({ artistList }) {
   const [filteredArtists, setFilteredArtists] = useState(artistList);
   const [searchInput, setSearchInput] = useState('');
+  const [artistNameOrder, setArtistNameOrder] = useState('asc');
 
   const onSearchChange = (e) => {
     setSearchInput(e.target.value);
-
-    if (!e.target.value) {
-      setFilteredArtists(artistList);
-    } else {
-      let search = e.target.value.toLowerCase();
-      let result = [];
-
-      artistList.forEach((artist) => {
-        let artistName = artist.name.toLowerCase();
-        let artistGenre = artist.genre.toLowerCase();
-
-        if (artistName.includes(search) || artistGenre.includes(search)) {
-          result.push(artist);
-        }
-      });
-
-      setFilteredArtists(result);
-    }
   };
+
+  const handleArtistOrderClick = () => {
+    if (artistNameOrder === 'asc') setArtistNameOrder('desc');
+    else setArtistNameOrder('asc');
+  };
+
+  const filterAndSortArtists = useCallback(() => {
+    if (!searchInput) {
+      const sortedResult = sortArtistAlphabetically(artistList, artistNameOrder);
+      setFilteredArtists(sortedResult);
+      return;
+    }
+
+    const filteredResult = filterArtistList(artistList, searchInput);
+    const sortedResult = sortArtistAlphabetically(filteredResult, artistNameOrder);
+    setFilteredArtists(sortedResult);
+  }, [searchInput, artistList, artistNameOrder]);
+
+  useEffect(() => {
+    console.log('this ran');
+    filterAndSortArtists();
+  }, [searchInput, artistList, filterAndSortArtists, artistNameOrder]);
 
   return (
     <Fragment>
@@ -60,6 +66,14 @@ export default function Home({ artistList }) {
               <label htmlFor="artistSearch" className={styles.formLabel}>
                 Search Artists
               </label>
+            </div>
+            <div className={styles.artistOrderContainer}>
+              <button onClick={handleArtistOrderClick} className={`btn ${artistNameOrder === 'desc' && 'btn-outline'}`}>
+                Artist A-Z
+              </button>
+              <button onClick={handleArtistOrderClick} className={`btn ${artistNameOrder === 'asc' && 'btn-outline'}`}>
+                Artist Z-A
+              </button>
             </div>
           </div>
 
