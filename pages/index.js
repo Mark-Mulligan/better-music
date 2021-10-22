@@ -32,7 +32,6 @@ export default function Home({ artistList }) {
   }, [searchInput, artistList, artistNameOrder]);
 
   useEffect(() => {
-    console.log('this ran');
     filterAndSortArtists();
   }, [searchInput, artistList, filterAndSortArtists, artistNameOrder]);
 
