@@ -1,0 +1,29 @@
+.select {
+  position: relative;
+}
+
+.select ul {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background: grey;
+}
+
+.select li {
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.select li:hover {
+  background: darkgray;
+  cursor: pointer;
+}
+
+.selectInput {
+  height: 40px;
+  width: 100%;
+  font-size: 1.1rem;
+  border-bottom: 2px solid black;
+}

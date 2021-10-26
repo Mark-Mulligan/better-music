@@ -1,9 +1,19 @@
 import Head from 'next/head';
 import { Fragment, useState, useEffect, useCallback } from 'react';
 import ArtistCard from '../components/ArtistCard';
+import Select from '../components/ui/Select';
 import { getArtistInfoForHome } from '../data';
 import { sortArtistAlphabetically, filterArtistList } from '../util/utils';
 import styles from './Home.module.css';
+
+const selectOptions = [
+  {
+    value: 'jazz',
+    label: 'Jazz',
+  },
+  { value: 'r&b/soul', label: 'R&B/Soul' },
+  { value: 'pop', label: 'Pop' },
+];
 
 export default function Home({ artistList }) {
   const [filteredArtists, setFilteredArtists] = useState(artistList);
@@ -73,6 +83,9 @@ export default function Home({ artistList }) {
               <button onClick={handleArtistOrderClick} className={`btn ${artistNameOrder === 'asc' && 'btn-outline'}`}>
                 Artist Z-A
               </button>
+            </div>
+            <div>
+              <Select options={selectOptions} />
             </div>
           </div>
 
