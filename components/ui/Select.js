@@ -1,13 +1,33 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './Select.module.css';
 
 const Select = ({ options }) => {
   const [selectedOptions, setSelectOptions] = useState([]);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  useEffect(() => {
+    console.log(selectedOptions);
+  });
+
   const handleOptionClick = (selectedItem) => {
-    console.log([...selectedOptions, selectedItem]);
-    setSelectOptions([...selectedOptions, selectedItem]);
+    let itemSelected = false;
+    let result = [];
+
+    for (let i = 0; i < selectedOptions.length; i++) {
+      if (selectedOptions[i]['value'] === selectedItem.value) {
+        itemSelected = true;
+        result = [...selectedOptions];
+        result.splice(i, 1);
+        setSelectOptions(result);
+        break;
+      }
+    }
+
+    if (!itemSelected) {
+      setSelectOptions([...selectedOptions, selectedItem]);
+    }
+
+    // console.log(selectedOptions);
   };
 
   const handleSelectInputClick = () => {
