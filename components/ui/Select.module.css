@@ -46,3 +46,17 @@
   top: -17px;
   left: 0;
 }
+
+.chip {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background: black;
+  color: white;
+  margin-right: 7px;
+  border-radius: 5px;
+}
+
+.chip span {
+  margin-right: 6px;
+}
