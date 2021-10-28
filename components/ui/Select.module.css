@@ -31,3 +31,10 @@
   align-items: center;
   padding-left: 5px;
 }
+
+.selectLabel {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  transition: 0.2s;
+}

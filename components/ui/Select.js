@@ -5,29 +5,21 @@ const Select = ({ options }) => {
   const [selectedOptions, setSelectOptions] = useState([]);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    console.log(selectedOptions);
-  });
-
   const handleOptionClick = (selectedItem) => {
-    let itemSelected = false;
-    let result = [];
+    let selectedItems = [...selectedOptions];
+    let removeItem = false;
+    let deleteIndex = 0;
 
-    for (let i = 0; i < selectedOptions.length; i++) {
-      if (selectedOptions[i]['value'] === selectedItem.value) {
-        itemSelected = true;
-        result = [...selectedOptions];
-        result.splice(i, 1);
-        setSelectOptions(result);
+    for (let i = 0; i < selectedItems.length; i++) {
+      if (selectedItems[i]['value'] === selectedItem.value) {
+        removeItem = true;
+        deleteIndex = i;
         break;
       }
     }
 
-    if (!itemSelected) {
-      setSelectOptions([...selectedOptions, selectedItem]);
-    }
-
-    // console.log(selectedOptions);
+    removeItem ? selectedItems.splice(deleteIndex, 1) : selectedItems.push(selectedItem);
+    setSelectOptions(selectedItems);
   };
 
   const handleSelectInputClick = () => {
@@ -37,7 +29,10 @@ const Select = ({ options }) => {
   return (
     <form className={styles.select}>
       <div className={styles.selectInput} onClick={handleSelectInputClick}>
-        <span>Genres</span>
+        <span className={selectedOptions.length > 0 ? styles.selectLabel : ''}>Genres</span>
+        {selectedOptions.map((item) => (
+          <span key={item.label}>{item.label}</span>
+        ))}
       </div>
       <ul style={{ height: menuOpen ? 'auto' : 0, overflow: menuOpen ? 'auto' : 'hidden' }}>
         {options.map((option) => (
