@@ -29,7 +29,7 @@ const Select = ({ options }) => {
   return (
     <form className={styles.select}>
       <div className={styles.selectInput} onClick={handleSelectInputClick}>
-        <span className={selectedOptions.length > 0 ? styles.selectLabel : ''}>Genres</span>
+        <span className={selectedOptions.length > 0 ? styles.filledSelectLabel : styles.emptySelectLabel}>Genres</span>
         {selectedOptions.map((item) => (
           <span key={item.label}>{item.label}</span>
         ))}
