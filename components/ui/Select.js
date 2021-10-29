@@ -28,14 +28,29 @@ const Select = ({ options }) => {
     setMenuOpen(!menuOpen);
   };
 
+  const handleChipToggle = (e, selectedItem) => {
+    e.stopPropagation();
+    let selectedItems = [...selectedOptions];
+
+    for (let i = 0; i < selectedItems.length; i++) {
+      if (selectedItems[i]['value'] === selectedItem.value) {
+        selectedItems.splice(i, 1);
+        setSelectOptions(selectedItems);
+        break;
+      }
+    }
+  };
+
   return (
     <form className={styles.select}>
       <div className={styles.selectInput} onClick={handleSelectInputClick}>
         <span className={selectedOptions.length > 0 ? styles.filledSelectLabel : styles.emptySelectLabel}>Genres</span>
         {selectedOptions.map((item) => (
           <div className={styles.chip} key={item.label}>
-            <span>{item.label}</span>
-            <FontAwesomeIcon className={styles.closeIcon} icon={faTimes} size="sm" />{' '}
+            <span className={styles.chipLabel}>{item.label}</span>
+            <span onClick={(e) => handleChipToggle(e, item)} className={styles.chipToggle}>
+              <FontAwesomeIcon className={styles.closeIcon} icon={faTimes} size="sm" />
+            </span>
           </div>
         ))}
       </div>

@@ -43,20 +43,29 @@
   position: absolute;
   font-size: 0.9rem;
   transition: 0.3s;
-  top: -17px;
+  top: -18px;
   left: 0;
 }
 
 .chip {
   display: flex;
   align-items: center;
-  padding: 5px 10px;
   background: black;
   color: white;
   margin-right: 7px;
   border-radius: 5px;
+  overflow: hidden;
 }
 
-.chip span {
-  margin-right: 6px;
+.chipLabel {
+  padding: 5px;
+  padding-left: 10px;
+}
+
+.chipToggle {
+  padding: 5px 10px;
+}
+
+.chipToggle:hover {
+  background: grey;
 }
