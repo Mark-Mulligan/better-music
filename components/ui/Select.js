@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import styles from './Select.module.css';
 
 const Select = ({ options }) => {
@@ -45,12 +45,17 @@ const Select = ({ options }) => {
     <form className={styles.select}>
       <div className={styles.selectInput} onClick={handleSelectInputClick}>
         <span className={selectedOptions.length > 0 ? styles.filledSelectLabel : styles.emptySelectLabel}>Genres</span>
+        <button className={styles.selectToggle}>
+          <FontAwesomeIcon icon={faCaretDown} />
+        </button>
         {selectedOptions.map((item) => (
-          <div className={styles.chip} key={item.label}>
-            <span className={styles.chipLabel}>{item.label}</span>
-            <span onClick={(e) => handleChipToggle(e, item)} className={styles.chipToggle}>
-              <FontAwesomeIcon className={styles.closeIcon} icon={faTimes} size="sm" />
-            </span>
+          <div className={styles.chipWrapper} key={item.label}>
+            <div className={styles.chip}>
+              <span className={styles.chipLabel}>{item.label}</span>
+              <span onClick={(e) => handleChipToggle(e, item)} className={styles.chipToggle}>
+                <FontAwesomeIcon className={styles.closeIcon} icon={faTimes} size="sm" />
+              </span>
+            </div>
           </div>
         ))}
       </div>
