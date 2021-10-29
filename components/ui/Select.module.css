@@ -38,6 +38,8 @@
   height: 100%;
   background: none;
   border: none;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .emptySelectLabel {

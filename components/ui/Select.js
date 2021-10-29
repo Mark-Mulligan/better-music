@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
 import styles from './Select.module.css';
 
 const Select = ({ options }) => {
@@ -46,14 +45,18 @@ const Select = ({ options }) => {
       <div className={styles.selectInput} onClick={handleSelectInputClick}>
         <span className={selectedOptions.length > 0 ? styles.filledSelectLabel : styles.emptySelectLabel}>Genres</span>
         <button className={styles.selectToggle}>
-          <FontAwesomeIcon icon={faCaretDown} />
+          {menuOpen ? (
+            <Image height={20} width={20} src="/icons/caretUp.svg" alt="caret up" />
+          ) : (
+            <Image height={20} width={20} src="/icons/caretDown.svg" alt="caret down" />
+          )}
         </button>
         {selectedOptions.map((item) => (
           <div className={styles.chipWrapper} key={item.label}>
             <div className={styles.chip}>
               <span className={styles.chipLabel}>{item.label}</span>
               <span onClick={(e) => handleChipToggle(e, item)} className={styles.chipToggle}>
-                <FontAwesomeIcon className={styles.closeIcon} icon={faTimes} size="sm" />
+                <Image height={15} width={15} src="/icons/whiteCloseIcon.svg" alt="close" />
               </span>
             </div>
           </div>
