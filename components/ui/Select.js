@@ -40,6 +40,16 @@ const Select = ({ options }) => {
     }
   };
 
+  const isOptionSelected = (option, selectedOptionsArr) => {
+    for (let i = 0; i < selectedOptionsArr.length; i++) {
+      if (selectedOptionsArr[i]['value'] === option.value) {
+        return true;
+      }
+    }
+
+    return false;
+  };
+
   return (
     <form className={styles.select}>
       <div className={styles.selectInput} onClick={handleSelectInputClick}>
@@ -64,7 +74,11 @@ const Select = ({ options }) => {
       </div>
       <ul style={{ height: menuOpen ? 'auto' : 0, overflow: menuOpen ? 'auto' : 'hidden' }}>
         {options.map((option) => (
-          <li onClick={() => handleOptionClick(option)} key={option.value}>
+          <li
+            onClick={() => handleOptionClick(option)}
+            key={option.value}
+            className={isOptionSelected(option, selectedOptions) ? styles.activeOption : ''}
+          >
             {option.label}
           </li>
         ))}
