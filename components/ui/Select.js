@@ -72,7 +72,7 @@ const Select = ({ options }) => {
           </div>
         ))}
       </div>
-      <ul style={{ height: menuOpen ? 'auto' : 0, overflow: menuOpen ? 'auto' : 'hidden' }}>
+      <ul className={menuOpen ? styles.open : ''}>
         {options.map((option) => (
           <li
             onClick={() => handleOptionClick(option)}
