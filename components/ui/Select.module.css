@@ -2,6 +2,12 @@
   position: relative;
 }
 
+@media (max-width: 915px) {
+  .select {
+    margin-top: 35px;
+  }
+}
+
 .select ul {
   position: absolute;
   overflow: hidden;

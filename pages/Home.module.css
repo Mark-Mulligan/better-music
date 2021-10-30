@@ -33,9 +33,16 @@
   column-gap: 30px;
 }
 
+.inputWrapper {
+  min-height: 40px;
+  position: relative;
+}
+
 .formGroup {
   position: relative;
   display: inline-block;
+  position: absolute;
+  bottom: 0;
   width: 100%;
 }
 
@@ -135,8 +142,26 @@
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 915px) {
+  .searchContainer {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .artistOrderContainer {
+    position: inherit;
+  }
+}
+
+@media (max-width: 615px) {
   .artistCardsContainer {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .artistOrderContainer {
+    margin-top: 35px;
+  }
+
+  .searchContainer {
     grid-template-columns: minmax(0, 1fr);
   }
 }

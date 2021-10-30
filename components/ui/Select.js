@@ -54,7 +54,7 @@ const Select = ({ options }) => {
     <form className={styles.select}>
       <div className={styles.selectInput} onClick={handleSelectInputClick}>
         <span className={selectedOptions.length > 0 ? styles.filledSelectLabel : styles.emptySelectLabel}>Genres</span>
-        <button className={styles.selectToggle}>
+        <button onClick={(e) => e.preventDefault()} className={styles.selectToggle}>
           {menuOpen ? (
             <Image height={20} width={20} src="/icons/caretUp.svg" alt="caret up" />
           ) : (

@@ -62,22 +62,24 @@ export default function Home({ artistList }) {
           <h2>Artists</h2>
 
           <div className={styles.searchContainer}>
-            <div className={styles.formGroup}>
-              <input
-                value={searchInput}
-                onChange={onSearchChange}
-                type="input"
-                className={styles.formField}
-                name="artistSearch"
-                id="artistSearch"
-                required
-              />
-              <label htmlFor="artistSearch" className={styles.formLabel}>
-                Search Artists
-              </label>
+            <div className={styles.inputWrapper}>
+              <div className={styles.formGroup}>
+                <input
+                  value={searchInput}
+                  onChange={onSearchChange}
+                  type="input"
+                  className={styles.formField}
+                  name="artistSearch"
+                  id="artistSearch"
+                  required
+                />
+                <label htmlFor="artistSearch" className={styles.formLabel}>
+                  Search Artists
+                </label>
+              </div>
             </div>
 
-            <div style={{ position: 'relative' }}>
+            <div className="relative">
               <div className={styles.artistOrderContainer}>
                 <button
                   onClick={handleArtistOrderClick}
