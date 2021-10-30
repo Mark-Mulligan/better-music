@@ -20,7 +20,8 @@
 }
 
 .select li {
-  padding: 5px;
+  font-size: 1.1rem;
+  padding: 8px;
   text-align: center;
   cursor: pointer;
   position: relative;
