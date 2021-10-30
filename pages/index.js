@@ -77,10 +77,16 @@ export default function Home({ artistList }) {
               </label>
             </div>
             <div className={styles.artistOrderContainer}>
-              <button onClick={handleArtistOrderClick} className={`btn ${artistNameOrder === 'desc' && 'btn-outline'}`}>
+              <button
+                onClick={handleArtistOrderClick}
+                className={`btn ${styles.leftBtn} ${artistNameOrder === 'desc' && 'btn-outline'}`}
+              >
                 Artist A-Z
               </button>
-              <button onClick={handleArtistOrderClick} className={`btn ${artistNameOrder === 'asc' && 'btn-outline'}`}>
+              <button
+                onClick={handleArtistOrderClick}
+                className={`btn ${styles.rightBtn} right-btn ${artistNameOrder === 'asc' && 'btn-outline'}`}
+              >
                 Artist Z-A
               </button>
             </div>

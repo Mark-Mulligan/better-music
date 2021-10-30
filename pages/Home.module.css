@@ -97,12 +97,6 @@
   border-image-slice: 1;
 }
 
-.artistOrderContainer {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  column-gap: 30px;
-}
-
 .artistCardsContainer {
   max-width: 1200px;
   padding-left: 15px;
@@ -113,6 +107,23 @@
   column-gap: 30px;
   row-gap: 30px;
   min-height: 100vh;
+}
+
+.artistOrderContainer {
+  height: 40px;
+}
+
+.artistOrderContainer button {
+  height: 100%;
+}
+
+.leftBtn {
+  width: calc(50% - 15px);
+}
+
+.rightBtn {
+  float: right;
+  width: calc(50% - 15px);
 }
 
 @media (max-width: 1000px) {
