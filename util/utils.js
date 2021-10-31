@@ -26,3 +26,22 @@ export const filterArtistList = (artistList, searchVal) => {
 
   return result;
 };
+
+export const filterByGenres = (artistList, genreArrs) => {
+  let result = [];
+
+  if (genreArrs.length === 0) {
+    return artistList;
+  }
+
+  artistList.forEach((artist) => {
+    for (let i = 0; i < artist.genreIds.length; i++) {
+      if (genreArrs.includes(artist.genreIds[i])) {
+        result.push(artist);
+        break;
+      }
+    }
+  });
+
+  return result;
+};
