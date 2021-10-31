@@ -33,75 +33,10 @@
   column-gap: 30px;
 }
 
-.inputWrapper {
-  min-height: 40px;
-  position: relative;
-}
-
-.formGroup {
-  position: relative;
-  display: inline-block;
+.customInputWrapper {
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-
-.formField {
-  font-family: inherit;
-  width: 100%;
-  border: 0;
-  border-bottom: 2px solid rgb(14, 14, 14);
-  outline: 0;
-  font-size: 1.3rem;
-  color: #11998e;
-  padding: 7px 0;
-  background: transparent;
-  transition: border-color 0.2s;
-}
-
-.formLabel {
-  position: absolute;
-  top: 7px;
-  left: 5px;
-  display: block;
-  transition: 0.2s;
-  font-size: 1.2rem;
-  color: rgb(14, 14, 14);
-}
-
-.formField:focus + .formLabel {
-  position: absolute;
-  top: -13px;
-  left: 0;
-  display: block;
-  transition: 0.2s;
-  font-size: 0.9rem;
-  color: #11998e;
-  font-weight: 700;
-}
-
-.formField:valid + .formLabel {
-  top: -13px;
-  left: 0;
-  font-size: 0.9rem;
-  color: #11998e;
-  font-weight: 700;
-}
-
-.formField:focus {
-  padding-bottom: 6px;
-  font-weight: 700;
-  border-width: 3px;
-  border-image: linear-gradient(to right, #11998e, #38ef7d);
-  border-image-slice: 1;
-}
-
-.formField:valid {
-  padding-bottom: 6px;
-  font-weight: 700;
-  border-width: 3px;
-  border-image: linear-gradient(to right, #11998e, #38ef7d);
-  border-image-slice: 1;
 }
 
 .artistCardsContainer {

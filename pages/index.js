@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Fragment, useState, useEffect, useCallback } from 'react';
 import ArtistCard from '../components/ArtistCard';
+import CustomInput from '../components/ui/CustomInput';
 import Select from '../components/ui/Select';
 import { getArtistInfoForHome } from '../data';
 import { sortArtistAlphabetically, filterArtistList } from '../util/utils';
@@ -62,20 +63,15 @@ export default function Home({ artistList }) {
           <h2>Artists</h2>
 
           <div className={styles.searchContainer}>
-            <div className={styles.inputWrapper}>
-              <div className={styles.formGroup}>
-                <input
-                  value={searchInput}
-                  onChange={onSearchChange}
-                  type="input"
-                  className={styles.formField}
-                  name="artistSearch"
+            <div className="relative">
+              <div className={styles.customInputWrapper}>
+                <CustomInput
                   id="artistSearch"
-                  required
+                  name="artistSearch"
+                  label="Search Artists"
+                  value={searchInput}
+                  onSearchChange={onSearchChange}
                 />
-                <label htmlFor="artistSearch" className={styles.formLabel}>
-                  Search Artists
-                </label>
               </div>
             </div>
 
