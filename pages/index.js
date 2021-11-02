@@ -4,7 +4,7 @@ import ArtistCard from '../components/ArtistCard';
 import CustomInput from '../components/ui/CustomInput';
 import Select from '../components/ui/Select';
 import { getArtistInfoForHome } from '../data';
-import { sortArtistAlphabetically, filterArtistList } from '../util/utils';
+import { sortArtistAlphabetically, filterArtistList, filterByGenres } from '../util/utils';
 import styles from './Home.module.css';
 
 const selectOptions = [
@@ -32,16 +32,12 @@ export default function Home({ artistList }) {
   };
 
   const filterAndSortArtists = useCallback(() => {
-    if (!searchInput) {
-      const sortedResult = sortArtistAlphabetically(artistList, artistNameOrder);
-      setFilteredArtists(sortedResult);
-      return;
-    }
-
-    const filteredResult = filterArtistList(artistList, searchInput);
+    const genreArr = genreList.map((genre) => genre.value);
+    const filteredResult = filterByGenres(artistList, genreArr);
     const sortedResult = sortArtistAlphabetically(filteredResult, artistNameOrder);
-    setFilteredArtists(sortedResult);
-  }, [searchInput, artistList, artistNameOrder]);
+    const finalResult = filterArtistList(sortedResult, searchInput);
+    setFilteredArtists(finalResult);
+  }, [searchInput, artistList, artistNameOrder, genreList]);
 
   useEffect(() => {
     filterAndSortArtists();

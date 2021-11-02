@@ -15,6 +15,10 @@ export const filterArtistList = (artistList, searchVal) => {
   let search = searchVal.toLowerCase();
   let result = [];
 
+  if (!searchVal) {
+    return artistList;
+  }
+
   artistList.forEach((artist) => {
     let artistName = artist.name.toLowerCase();
     let artistGenre = artist.genre.toLowerCase();
@@ -27,16 +31,16 @@ export const filterArtistList = (artistList, searchVal) => {
   return result;
 };
 
-export const filterByGenres = (artistList, genreArrs) => {
+export const filterByGenres = (artistList, genreArr) => {
   let result = [];
 
-  if (genreArrs.length === 0) {
+  if (genreArr.length === 0) {
     return artistList;
   }
 
   artistList.forEach((artist) => {
     for (let i = 0; i < artist.genreIds.length; i++) {
-      if (genreArrs.includes(artist.genreIds[i])) {
+      if (genreArr.includes(artist.genreIds[i])) {
         result.push(artist);
         break;
       }

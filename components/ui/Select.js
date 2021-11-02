@@ -3,7 +3,6 @@ import Image from 'next/image';
 import styles from './Select.module.css';
 
 const Select = ({ options, selectedOptions, setSelectOptions }) => {
-  //const [selectedOptions, setSelectOptions] = useState([]);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleOptionClick = (selectedItem) => {
