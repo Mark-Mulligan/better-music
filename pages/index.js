@@ -20,6 +20,7 @@ export default function Home({ artistList }) {
   const [filteredArtists, setFilteredArtists] = useState(artistList);
   const [searchInput, setSearchInput] = useState('');
   const [artistNameOrder, setArtistNameOrder] = useState('asc');
+  const [genreList, setGenreList] = useState([]);
 
   const onSearchChange = (e) => {
     setSearchInput(e.target.value);
@@ -92,7 +93,7 @@ export default function Home({ artistList }) {
               </div>
             </div>
             <div>
-              <Select options={selectOptions} />
+              <Select options={selectOptions} selectedOptions={genreList} setSelectOptions={setGenreList} />
             </div>
           </div>
 
