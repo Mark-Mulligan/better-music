@@ -131,6 +131,30 @@ export const artistPageInfo = {
       a collaboration with Yussef Dayes, arrived in April 2020 and included the spotlight track "Kyiv."`,
     ],
   },
+  'victoria-canal': {
+    id: 'victoria-canal',
+    name: 'Victoria Canal',
+    genre: 'Pop',
+    genreIds: ['pop'],
+    profileSrc: '/images/victoria-canal-profile.jpeg',
+    profileAlt: 'Victoria Canal playing piano',
+    backgroundSrc: '/images/victoria-canal-background.jpeg',
+    backgroundAlt: 'Victoria Canal',
+    youTubeId: 'h0HHf7jrTLI',
+    bio: [
+      `Since her emergence in 2015, the songstress has quietly impacted both culture and music. She would also be tapped by Michael Franti for a marathon of touring, 
+    enlisted by Nike as a rep and model for the FlyEase Air Jordan 1 designed for adaptive athletes, and streamed more than 10 million times to date. `,
+      `Canal was born 
+    in Munich to Gwen Tinius, an architect and artist, and Francisco Canal, a businessman. She has since lived in Shanghai, Tokyo, Barcelona, Madrid, Dubai, and Amsterdam. 
+    Her ethnicity is Cuban and American descent, but refers to herself as Spanish-American because Spain is where she was raised most of her life. At a very young age, 
+    her grandmother, a piano teacher, introduced her to music. She started taking classical lessons at 6 years old for both piano and voice. When she turned 11, she 
+    discovered songwriting after listening to writers like John Mayer and Gavin DeGraw and decided she wanted to be a singer-songwriter when she grew up. She participated 
+    in local and school competitions wherever she could and started booking her own gigs. Her reputation at school was "that singer girl who spends all her time 
+    practicing between classes", up to the point that when Victoria moved from Dubai to Barcelona in 2013 (she was about to start 10th grade), she decided to do online 
+    school instead to be able to pursue music more professionally. Her inspiration comes from unfamiliar instruments that she doesn't play as well as she does piano, 
+    like the bass, loop station, harmonica, etc.`,
+    ],
+  },
   'yussef-dayes': {
     id: 'yussef-dayes',
     name: 'Yussef Dayes',

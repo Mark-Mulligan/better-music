@@ -1,3 +1,12 @@
+export const genreSelectOptions = [
+  {
+    value: 'jazz',
+    label: 'Jazz',
+  },
+  { value: 'r&b/soul', label: 'R&B/Soul' },
+  { value: 'pop', label: 'Pop' },
+];
+
 export const sortArtistAlphabetically = (inputArr, order) => {
   // sort does not return a new array.  There were problems updating the state because the inputArr was being assigned.
   // I need to make a copy of the input array (slice) to get it the work properly
