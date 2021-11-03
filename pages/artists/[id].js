@@ -6,7 +6,7 @@ import styles from './id.module.css';
 import { getArtistInfo, getArtistPathParams } from '../../data';
 
 const ArtistPage = (props) => {
-  const { name, youTubeId, bio, backgroundSrc, backgroundAlt } = props;
+  const { name, youTubeId, bio, backgroundSrc, backgroundAlt, appleMusic, spotify, youtube, instagram } = props;
 
   if (!bio) {
     return <div>Not found</div>;
@@ -41,31 +41,22 @@ const ArtistPage = (props) => {
           </div>
           <ul className={styles.linksContainer}>
             <li>
-              <a href="https://www.apple.com/apple-music/" target="_blank" rel="noreferrer">
+              <a href={appleMusic} target="_blank" rel="noreferrer">
                 <Image src="/icons/appleMusic.svg" alt="apple music link" height={75} width={75} />
               </a>
             </li>
-
             <li>
-              <a href="https://www.spotify.com/us/" target="_blank" rel="noreferrer">
+              <a href={spotify} target="_blank" rel="noreferrer">
                 <Image src="/icons/spotify.svg" alt="spotify link" height={60} width={60} />
               </a>
             </li>
-
             <li>
-              <a href="https://play.google.com/store?hl=en_US&gl=US" target="_blank" rel="noreferrer">
-                <Image src="/icons/googlePlay.svg" alt="google play link" height={60} width={60} />
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
+              <a href={youtube} target="_blank" rel="noreferrer">
                 <Image src="/icons/youtube.svg" alt="youtube link" height={70} width={75} />
               </a>
             </li>
-
             <li>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer">
+              <a href={instagram} target="_blank" rel="noreferrer">
                 <Image src="/icons/instagram.svg" alt="instagram logo" height={58} width={58} />
               </a>
             </li>
@@ -86,7 +77,7 @@ export async function getStaticProps(context) {
     };
   }
 
-  const { name, youTubeId, bio, backgroundSrc, backgroundAlt } = artistData;
+  const { name, youTubeId, bio, backgroundSrc, backgroundAlt, appleMusic, spotify, youtube, instagram } = artistData;
 
   return {
     props: {
@@ -95,6 +86,10 @@ export async function getStaticProps(context) {
       bio,
       backgroundSrc,
       backgroundAlt,
+      appleMusic,
+      spotify,
+      youtube,
+      instagram,
     },
     revalidate: 60000,
   };

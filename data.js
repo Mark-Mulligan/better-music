@@ -9,6 +9,10 @@ export const artistPageInfo = {
     backgroundSrc: '/images/hiatus-kaiyote-background.jpeg',
     backgroundAlt: 'All members of the band Hiatus Kaiyote',
     youTubeId: 'ghw26g3h6L0',
+    appleMusic: 'https://music.apple.com/us/artist/hiatus-kaiyote/514090753',
+    spotify: 'https://open.spotify.com/artist/43JlwunhXm1oqdKyOa2Z9Y',
+    youtube: 'https://www.youtube.com/channel/UCmD8TDgJxofPfxA8GTpaCCQ',
+    instagram: 'https://www.instagram.com/hiatuskaiyote/?hl=en',
     bio: [
       `Hiatus Kaiyote are a 4-piece independent future soul group based in Melbourne, performing on occasion with 3 additional backing singers. 
     Their sound is a fusion of future beats, hip-hop and soul with subtler influences of Latin, dubstep and opera`,
@@ -27,6 +31,10 @@ export const artistPageInfo = {
     backgroundSrc: '/images/jordan-rakei-background.jpg',
     backgroundAlt: 'Jordan Rakei on stage',
     youTubeId: 'JtBmUxz4GsM',
+    appleMusic: 'https://music.apple.com/us/artist/jordan-rakei/705284964',
+    spotify: 'https://open.spotify.com/artist/24icoQNJSEWNu3XvqKBR68',
+    youtube: 'https://www.youtube.com/channel/UC4ZVH32PCUG_iL7UI2ulmLw',
+    instagram: 'https://www.instagram.com/jrakz/?hl=en',
     bio: [
       `A soul-rooted alternative R&B artist who sings, writes, and produces, London-based Jordan Rakei 
       debuted in 2013 with the EP Franklin's Room before issuing a slew of albums for Ninja Tune, 
@@ -58,6 +66,10 @@ export const artistPageInfo = {
     backgroundSrc: '/images/lawerence-background.jpg',
     backgroundAlt: 'Lawerence on stage',
     youTubeId: 'C01nBm6vV5c',
+    appleMusic: 'https://music.apple.com/us/artist/lawrence/1087075288',
+    spotify: 'https://open.spotify.com/artist/5rwUYLyUq8gBsVaOUcUxpE',
+    youtube: 'https://www.youtube.com/channel/UCr5v6l4EIKiImmJU-COJ0Sg',
+    instagram: 'https://www.instagram.com/lawrencetheband/?hl=en',
     bio: [
       `As NPR writes, “siblings Clyde and Gracie Lawrence are not your typical pair." Clyde Lawrence and Gracie Lawrence have been 
       writing songs and listening to countless Stevie Wonder, Randy Newman, and Aretha Franklin records in their family's New York 
@@ -90,6 +102,10 @@ export const artistPageInfo = {
     backgroundSrc: '/images/snarky-puppy-background.jpeg',
     backgroundAlt: 'Snarky Puppy',
     youTubeId: 'L_XJ_s5IsQc',
+    appleMusic: 'https://music.apple.com/us/artist/snarky-puppy/152987454',
+    spotify: 'https://open.spotify.com/artist/7ENzCHnmJUr20nUjoZ0zZ1',
+    youtube: 'https://www.youtube.com/channel/UCPl2RYo0lLLqj8RaEADYclg',
+    instagram: 'https://www.instagram.com/snarkypuppy/?hl=en',
     bio: [
       `After a decade of relentless touring and recording in all but complete obscurity, the Texas-bred/New York-based 
     quasi-collective suddenly found itself held up by the press and public as one of the major figures in the jazz world. 
@@ -113,6 +129,10 @@ export const artistPageInfo = {
     backgroundSrc: '/images/tom-misch-background.jpeg',
     backgroundAlt: 'Tom Misch on stage',
     youTubeId: 'IUMTaAQ43lY',
+    appleMusic: 'https://music.apple.com/us/artist/tom-misch/893237941',
+    spotify: 'https://open.spotify.com/artist/1uiEZYehlNivdK3iQyAbye',
+    youtube: 'https://www.youtube.com/channel/UCKXs11Oj1codrEy33D6XgkQ',
+    instagram: 'https://www.instagram.com/tommisch/?hl=en',
     bio: [
       `London-based producer/singer/songwriter Tom Misch blends hip-hop-inspired beats with smoothly soulful vocals and guitar.`,
       `The son of an artist and a psychiatrist, Misch grew up in a home that encouraged creativity, and learned to play violin at a 
@@ -141,6 +161,10 @@ export const artistPageInfo = {
     backgroundSrc: '/images/victoria-canal-background.jpeg',
     backgroundAlt: 'Victoria Canal',
     youTubeId: 'h0HHf7jrTLI',
+    appleMusic: 'https://music.apple.com/us/artist/victoria-canal/842683412',
+    spotify: 'https://open.spotify.com/artist/2nE9x2JhbyjBVCaSnUGX3G',
+    youtube: 'https://www.youtube.com/channel/UC2a1zJeKXc6cwqFU8xaQ2jQ',
+    instagram: 'https://www.instagram.com/victoriacanal/?hl=en',
     bio: [
       `Since her emergence in 2015, the songstress has quietly impacted both culture and music. She would also be tapped by Michael Franti for a marathon of touring, 
     enlisted by Nike as a rep and model for the FlyEase Air Jordan 1 designed for adaptive athletes, and streamed more than 10 million times to date. `,
@@ -165,6 +189,10 @@ export const artistPageInfo = {
     backgroundSrc: '/images/yussef-dayes-background.jpeg',
     backgroundAlt: 'Yussef Dayes on stage',
     youTubeId: '1g826StJhLk',
+    appleMusic: 'https://music.apple.com/us/artist/yussef-dayes/1147722309',
+    spotify: 'https://open.spotify.com/artist/2rspptKP0lPBdlJJAJHqht',
+    youtube: 'https://www.youtube.com/channel/UCKg5V9CoMPXC3NYtmDAUmrg',
+    instagram: 'https://www.instagram.com/yussefdayes/?hl=en',
     bio: [
       `Yussef Dayes is one of the UK’s most exciting, innovative young drummers and producers. Though largely considered a 
       “jazz” drummer, his sound melds everything from 70s funk to Senegalese percussion to recent UK grime. The unifying factor is a fluid, vital energy.`,

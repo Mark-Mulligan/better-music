@@ -55,16 +55,10 @@
 
 .linksContainer {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
 }
 
 @media (max-width: 600px) {
-  .linksContainer {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-  }
-}
-
-@media (max-width: 400px) {
   .linksContainer {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
