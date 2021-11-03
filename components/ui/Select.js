@@ -1,9 +1,26 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import styles from './Select.module.css';
 
 const Select = ({ options, selectedOptions, setSelectOptions }) => {
+  const selectNode = useRef();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleOustideClick);
+
+    return () => {
+      document.removeEventListener('mousedown', handleOustideClick);
+    };
+  }, []);
+
+  const handleOustideClick = (e) => {
+    if (selectNode.current.contains(e.target)) {
+      return;
+    }
+
+    setMenuOpen(false);
+  };
 
   const handleOptionClick = (selectedItem) => {
     let selectedItems = [...selectedOptions];
@@ -50,7 +67,7 @@ const Select = ({ options, selectedOptions, setSelectOptions }) => {
   };
 
   return (
-    <form className={styles.select}>
+    <form ref={selectNode} className={styles.select}>
       <div className={styles.selectInput} onClick={handleSelectInputClick}>
         <span className={selectedOptions.length > 0 ? styles.filledSelectLabel : styles.emptySelectLabel}>Genres</span>
         <button onClick={(e) => e.preventDefault()} className={styles.selectToggle}>
