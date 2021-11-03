@@ -92,6 +92,32 @@ export const artistPageInfo = {
       (2009), and in tv shows including The Good Wife (2012), The Americans (2014), and Younger (2015).`,
     ],
   },
+  moonchild: {
+    id: 'moonchild',
+    name: 'Moonchild',
+    genre: 'R&B/Soul',
+    genreIds: ['r&b/soul'],
+    profileSrc: '/images/moonchild-profile.jpeg',
+    profileAlt: '3 members of moonchild',
+    backgroundSrc: '/images/moonchild-background.jpeg',
+    backgroundAlt: '3 members of moonchild',
+    youTubeId: 'B_ymY0xG0LI',
+    appleMusic: 'https://music.apple.com/us/artist/moonchild/192736023',
+    spotify: 'https://open.spotify.com/artist/1VgjAK52kjkQJQQRhTn02t',
+    youtube: 'https://www.youtube.com/channel/UCCBSAJ-B8QNfds8zAkjn51A',
+    instagram: 'https://www.instagram.com/thisismoonchild/?hl=en',
+    bio: [
+      `Moonchild is an American alternative R&B band based in Los Angeles, California. The band consists of Amber Navran, Max Bryk, and Andris Mattson. 
+    All three are alumni of USC Thornton School of Music's Jazz Studies program. The band formed in the summer of 2011 after touring the west coast 
+    with Navran's previous solo project. The trio bonded in the car over similar music tastes and spent the summer and subsequent fall writing the music for 
+    what became their debut album Be Free, which would be released the following year.`,
+      `The debut album was well received by critics, garnering praise from many musical greats including Jill Scott, DJ Jazzy Jeff, and Stevie Wonder. After 
+    hearing the group's music in December 2012, Wonder invited the group to open for him at his annual House Full of Toys benefit concert.`,
+      `Since the release of Be Free in 2012, the band has released three more albums through British record label Tru Thoughts and toured internationally. 
+    They have also collaborated on tracks with Rapsody and Tall Black Guy. Moonchild performed an NPR Tiny Desk Concert in December 2019. 
+    During the 2019 Little Ghost US Tour, the band used their platform to promote local charities in each city they played in.`,
+    ],
+  },
   'snarky-puppy': {
     id: 'snarky-puppy',
     name: 'Snarky Puppy',
