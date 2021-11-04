@@ -42,7 +42,7 @@ export default function Home({ artistList }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.mainBody}>
+      <main>
         <section className={styles.heroSection}>
           <h1>Better Music</h1>
         </section>
