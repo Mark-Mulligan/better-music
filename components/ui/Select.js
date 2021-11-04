@@ -88,7 +88,7 @@ const Select = ({ options, selectedOptions, setSelectOptions }) => {
           </div>
         ))}
       </div>
-      <ul className={menuOpen ? styles.open : ''}>
+      <ul className={menuOpen ? styles.open : styles.closed}>
         {options.map((option) => (
           <li
             onClick={() => handleOptionClick(option)}

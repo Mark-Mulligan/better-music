@@ -1,4 +1,29 @@
 export const artistPageInfo = {
+  chon: {
+    id: 'chon',
+    name: 'Chon',
+    genre: 'Rock',
+    genreIds: ['rock'],
+    profileSrc: '/images/chon-profile.jpeg',
+    profileAlt: 'Picture of the 4 memebers of the band Chon.',
+    backgroundSrc: '/images/chon-background.jpeg',
+    backgroundAlt: 'Chon on stage',
+    youTubeId: 'xdCbfdlj5CA',
+    appleMusic: 'https://music.apple.com/us/artist/chon/6967071',
+    spotify: 'https://open.spotify.com/artist/2JFljHPanIjYy2QqfNYvC0',
+    youtube: 'https://www.youtube.com/watch?v=pxZuPLPERbk',
+    instagram: 'https://www.instagram.com/chonofficial/?hl=en',
+    bio: [
+      `A technical post-hardcore band with heavy instrumental tendencies, Chon formed in San Diego in 2008. The band originally 
+    comprised bassist/vocalist Esiah Camarena, drummer Nathan Camarena, and guitarists Erick Hansel and Mario Camarena. While playing shows on 
+    the emo and post-hardcore scene, Chon's tunes were influenced from the start by jazz, prog rock, and even classical tendencies. Esiah was out 
+    of the band by the time they released their debut EP, Newborn Sun, in 2013, replaced by bassist Drew Pelisek. They toured frequently, returning 
+    the next year with another EP, Woohoo!, and in 2015 they released their first full-length album, Grow (Sumerian Records). Pelisek left Chon near 
+    the end of the year, and the group toured with three different bassists after his departure, including Esiah, who officially re-joined the band in 2016. 
+    Chon's sophomore set, Homey, arrived in 2017, adding hip-hop and R&B influences to the group's sound. They quickly followed with their third set, 
+    a self-titled collection that included singles "Petal" and "Peace."`,
+    ],
+  },
   'hiatus-kaiyote': {
     id: 'hiatus-kaiyote',
     name: 'Hiatus Kaiyote',
@@ -19,6 +44,32 @@ export const artistPageInfo = {
       `Hiatus Kaiyote came onto the scene with their debut album, Tawk Tomahawk, back in 2012 and created a groundswell of buzz among global music heads. 
     Since then, they've gone on to win varying international awards and were the first Australian group to get nominated in the R&B category at the 
     Grammys for best R&B performance in 2013. This uber-fun and exhilarating set will appease diehards and new fans alike.`,
+    ],
+  },
+  'jacob-collier': {
+    id: 'jacob-collier',
+    name: 'Jacob Collier',
+    genre: 'Jazz',
+    genreIds: ['jazz'],
+    profileSrc: '/images/jacob-collier-profile.jpeg',
+    profileAlt: 'Jacob Collier',
+    backgroundSrc: '/images/jacob-collier-background.png',
+    backgroundAlt: 'Jacob collier',
+    youTubeId: 'zua831utwMM',
+    appleMusic: 'https://music.apple.com/us/artist/jacob-collier/730498854',
+    spotify: 'https://open.spotify.com/artist/0QWrMNukfcVOmgEU0FEDyD',
+    youtube: 'https://www.youtube.com/user/jacobcolliermusic',
+    instagram: 'https://www.instagram.com/jacobcollier/?hl=en',
+    bio: [
+      `Jacob Collier (born 2 August 1994) is a British singer, arranger, composer, producer, and multi-instrumentalist based in London, England. In 2012, 
+    his homemade split-screen video covers of popular songs, such as Stevie Wonder’s “Don’t You Worry ’bout a Thing”, began to go viral on YouTube. 
+    Since then, he has attracted a worldwide following, accumulating tens of millions of views across multiple social media platforms.`,
+      `Collier’s style fuses elements of jazz, a cappella, groove, folk, electronic music, classical music, gospel, soul and improvisation, and often 
+    features extreme use of reharmonisation. In 2014, Collier signed to Quincy Jones’ management company and began working on his one-man, audio-visual 
+    live performance vehicle, designed and built at MIT in Boston.`,
+      `On 1 July 2016, Collier released his debut album, In My Room, which was entirely 
+    self-recorded, arranged, performed and produced in his home in London. In February 2017, Collier was awarded two Grammys for his arrangements 
+    of “Flintstones” and “You And I”, both from the album.`,
     ],
   },
   'jordan-rakei': {

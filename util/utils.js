@@ -5,6 +5,7 @@ export const genreSelectOptions = [
   },
   { value: 'r&b/soul', label: 'R&B/Soul' },
   { value: 'pop', label: 'Pop' },
+  { value: 'rock', label: 'Rock' },
 ];
 
 export const sortArtistAlphabetically = (inputArr, order) => {
