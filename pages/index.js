@@ -69,13 +69,13 @@ export default function Home({ artistList }) {
                   onClick={handleArtistOrderClick}
                   className={`btn ${styles.leftBtn} ${artistNameOrder === 'desc' && 'btn-outline'}`}
                 >
-                  Artist A-Z
+                  A-Z
                 </button>
                 <button
                   onClick={handleArtistOrderClick}
                   className={`btn ${styles.rightBtn} right-btn ${artistNameOrder === 'asc' && 'btn-outline'}`}
                 >
-                  Artist Z-A
+                  Z-A
                 </button>
               </div>
             </div>
