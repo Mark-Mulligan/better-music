@@ -4,11 +4,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: url('/images/hero-background-two.jpg');
+  background-size: cover;
 }
 
-.specialBackground {
+/* .specialBackground {
   background-image: radial-gradient(circle 610px at 0% 30%, rgba(5, 8, 114, 1) 0%, rgba(7, 3, 53, 1) 70%);
-}
+} */
 
 .heroSection h1 {
   font-size: 4rem;
@@ -17,8 +19,9 @@
 
 .aboutSection {
   color: #e7ebef;
-  padding-top: 50px;
+  padding-top: 100px;
   padding-bottom: 200px;
+  background: rgb(0, 0, 0);
 }
 
 .aboutSection h2 {
@@ -37,7 +40,10 @@
 .artistSection {
   padding-top: 30px;
   padding-bottom: 30px;
-  background: #d5d8e6;
+  /* background: #d5d8e6; */
+  color: #e7ebef;
+  /* color: rgb(220, 220, 200); */
+  background: black;
 }
 
 .artistSection h2 {

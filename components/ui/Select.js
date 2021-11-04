@@ -82,7 +82,7 @@ const Select = ({ options, selectedOptions, setSelectOptions }) => {
             <div className={styles.chip}>
               <span className={styles.chipLabel}>{item.label}</span>
               <span onClick={(e) => handleChipToggle(e, item)} className={styles.chipToggle}>
-                <Image height={15} width={15} src="/icons/whiteCloseIcon.svg" alt="close" />
+                <Image height={15} width={15} src="/icons/closeIcon.svg" alt="close" />
               </span>
             </div>
           </div>

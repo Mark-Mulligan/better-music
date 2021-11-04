@@ -23,21 +23,21 @@ ul {
 
 .btn {
   padding: 0.4em 1.2em;
-  border: 0.1em solid rgb(14, 14, 14);
-  background: rgba(14, 14, 14);
+  border: 0.1em solid #e7ebef;
+  background: #e7ebef;
   border-radius: 0.12em;
   box-sizing: border-box;
   text-decoration: none;
   font-weight: 300;
   font-size: 1.1rem;
-  color: rgb(245, 245, 245);
+  color: black;
   text-align: center;
   transition: all 0.25s;
 }
 
 .btn-outline {
   background: none;
-  color: rgb(14, 14, 14);
+  color: #e7ebef;
 }
 
 .block {
@@ -46,13 +46,14 @@ ul {
 }
 
 .btn:hover {
-  background-color: rgb(40, 40, 40);
+  background-color: #c8cccf;
   cursor: pointer;
 }
 
-.btn:hover {
-  background-color: rgb(14, 14, 14);
-  color: rgb(245, 245, 245);
+.btn-outline:hover {
+  background-color: #e7ebef;
+  cursor: pointer;
+  color: black;
 }
 
 .relative {

@@ -16,7 +16,6 @@
   transition: 0.15s ease-out;
   width: 100%;
   z-index: 1;
-  background: grey;
   color: white;
   background: rgb(14, 14, 14);
 }
@@ -51,7 +50,7 @@
   cursor: pointer;
   width: 100%;
   font-size: 1.2rem;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #e7ebef;
   padding-left: 5px;
   padding-right: 20px;
   min-height: 40px;
@@ -95,8 +94,8 @@
 .chip {
   display: flex;
   align-items: center;
-  background: black;
-  color: white;
+  background: #e7ebef;
+  color: black;
   margin-right: 7px;
   border-radius: 5px;
   overflow: hidden;
@@ -112,5 +111,5 @@
 }
 
 .chipToggle:hover {
-  background: grey;
+  background: #afb2b6;
 }
