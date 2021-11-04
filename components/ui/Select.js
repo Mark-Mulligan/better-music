@@ -72,9 +72,9 @@ const Select = ({ options, selectedOptions, setSelectOptions }) => {
         <span className={selectedOptions.length > 0 ? styles.filledSelectLabel : styles.emptySelectLabel}>Genres</span>
         <button onClick={(e) => e.preventDefault()} className={styles.selectToggle}>
           {menuOpen ? (
-            <Image height={20} width={20} src="/icons/caretUp.svg" alt="caret up" />
+            <Image height={20} width={20} src="/icons/caretUpLight.svg" alt="caret up" />
           ) : (
-            <Image height={20} width={20} src="/icons/caretDown.svg" alt="caret down" />
+            <Image height={20} width={20} src="/icons/caretDownLight.svg" alt="caret down" />
           )}
         </button>
         {selectedOptions.map((item) => (

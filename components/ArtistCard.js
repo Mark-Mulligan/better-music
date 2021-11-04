@@ -12,7 +12,7 @@ const ArtistCard = ({ id, name, genre, src, alt }) => {
         <h4>{name}</h4>
         <p>{genre}</p>
         <Link href={`/artists/${id}`}>
-          <a className="btn block">View Artist Page</a>
+          <a className="btn block btn-dark">View Artist Page</a>
         </Link>
       </div>
     </div>

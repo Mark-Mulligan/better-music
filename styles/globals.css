@@ -56,6 +56,16 @@ ul {
   color: black;
 }
 
+.btn-dark {
+  background: black;
+  color: white;
+}
+
+.btn-dark:hover {
+  background: rgb(40, 40, 40);
+  color: white;
+}
+
 .relative {
   position: relative;
 }
