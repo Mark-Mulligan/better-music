@@ -24,6 +24,30 @@ export const artistPageInfo = {
     a self-titled collection that included singles "Petal" and "Peace."`,
     ],
   },
+  fkj: {
+    id: 'fkj',
+    name: 'FKJ',
+    genre: 'Dance/Electronic',
+    genreIds: ['dance/electronic'],
+    profileSrc: '/images/fkj-profile.jpeg',
+    profileAlt: 'FKJ playing guitar',
+    backgroundSrc: '/images/fkj-background.jpeg',
+    backgroundAlt: 'FKJ on stage',
+    youTubeId: 'a7p1R3xKSNA',
+    appleMusic: 'https://music.apple.com/us/artist/fkj/644688726',
+    spotify: 'https://open.spotify.com/artist/2FwDTncULUnmANIh7qKa5z',
+    youtube: 'https://www.youtube.com/channel/UCxqkOxQYocXRtSqlotgXh7w',
+    instagram: 'https://www.instagram.com/frenchkiwijuice/',
+    bio: [
+      `Paris-based producer Vincent Fenton creates mellow, sample-based electronic sounds under the name French Kiwi Juice, or FKJ for short. 
+    He started out working as a theater sound engineer while teaching himself the basics of music production at the same time. Finding a style within 
+    electronic music that melded the pulse of house with smoother organic elements, he and other artists on the Roche Musique label worked toward the 
+    development of an electronic subgenre of new French house near the start of the 2010s. A series of EPs arrived on the label, with The Twins showing up in 
+    2012 and Time for a Change dropping the next year. A strong online profile served as the basis for much of FKJ's fame, and he developed a strong live set to 
+    match his studio output on-stage. The Take Off EP followed in 2014, and FKJ spent much of the next two years working toward the recording of a proper 
+    full-length, which arrived in March of 2017 as a self-titled long player on the Believe Direct Limited label. A single, "Is Magic Gone," arrived the following year.`,
+    ],
+  },
   'hiatus-kaiyote': {
     id: 'hiatus-kaiyote',
     name: 'Hiatus Kaiyote',

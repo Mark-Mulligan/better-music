@@ -3,22 +3,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('/images/hero-background-two.jpg');
+  background: url('/images/hero-background-two-min.jpg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-@media (max-width: 1370px) {
+@media (max-width: 1140px) {
   .heroSection {
     background-size: cover;
   }
 }
 
-@media (max-width: 615px) {
+@media (max-width: 700px) {
   .heroSection {
     height: 100vw;
   }
+}
+
+.titleContainer {
+  position: relative;
+  height: 100px;
+  width: 300px;
+}
+
+.titleContainer .better {
+  position: absolute;
+  bottom: -50px;
+  left: -230px;
+}
+
+.titleContainer .music {
+  position: absolute;
+  bottom: -50px;
+  right: -200px;
 }
 
 .heroSection h1 {
@@ -107,6 +125,31 @@
 .rightBtn {
   float: right;
   width: calc(50% - 15px);
+}
+
+.footer {
+  min-height: 25vh;
+  position: relative;
+}
+
+.creditContainer {
+  position: absolute;
+  width: 100%;
+  bottom: 5px;
+  text-align: center;
+}
+
+.creditContainer p {
+  margin: 0;
+}
+
+.creditContainer a {
+  text-decoration: underline;
+}
+
+.creditContainer a:hover {
+  color: white;
+  font-weight: bold;
 }
 
 @media (max-width: 1000px) {

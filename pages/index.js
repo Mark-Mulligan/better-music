@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { Fragment, useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import ArtistCard from '../components/ArtistCard';
 import CustomInput from '../components/ui/CustomInput';
 import Select from '../components/ui/Select';
@@ -47,7 +48,10 @@ export default function Home({ artistList }) {
 
       <main className="fade-in">
         <section className={styles.heroSection}>
-          <h1>Better Music</h1>
+          <div className={styles.titleContainer}>
+            <h1 className={styles.better}>Better</h1>
+            <h1 className={styles.music}>Music</h1>
+          </div>
         </section>
 
         <section className={styles.aboutSection}>
@@ -113,6 +117,17 @@ export default function Home({ artistList }) {
               );
             })}
           </ul>
+        </section>
+
+        <section className={styles.footer}>
+          <div className={styles.creditContainer}>
+            <p>
+              Website create by{' '}
+              <a href="https://www.mulligandesigns.com" target="_black" rel="noreferrer">
+                mulligandesigns.com
+              </a>
+            </p>
+          </div>
         </section>
       </main>
     </Fragment>

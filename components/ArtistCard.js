@@ -14,6 +14,7 @@ const ArtistCard = ({ id, name, genre, src, alt }) => {
           objectPosition="center top"
           src={src}
           alt={alt}
+          lazyBoundary="400px"
         />
       </div>
       <div className={styles.cardBody}>
