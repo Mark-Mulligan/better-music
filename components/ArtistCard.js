@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const ArtistCard = ({ id, name, genre, src, alt }) => {
   return (
-    <div className={styles.artistCard}>
+    <div className={styles.artistCard} id={id}>
       <div className={styles.cardHeader}>
         <Image objectFit="cover" layout="fill" objectPosition="center top" src={src} alt={alt} />
       </div>

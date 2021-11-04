@@ -1,9 +1,13 @@
 .heroSection {
-  background: lightblue;
-  height: 75vh;
+  color: #e7ebef;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.specialBackground {
+  background-image: radial-gradient(circle 610px at 0% 30%, rgba(5, 8, 114, 1) 0%, rgba(7, 3, 53, 1) 70%);
 }
 
 .heroSection h1 {
@@ -11,10 +15,29 @@
   text-align: center;
 }
 
+.aboutSection {
+  color: #e7ebef;
+  padding-top: 50px;
+  padding-bottom: 200px;
+}
+
+.aboutSection h2 {
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+.aboutSection p {
+  max-width: 700px;
+  font-size: 1.8rem;
+  line-height: 1.35;
+  text-align: center;
+  margin: auto;
+}
+
 .artistSection {
   padding-top: 30px;
   padding-bottom: 30px;
-  background: lightgray;
+  background: #d5d8e6;
 }
 
 .artistSection h2 {

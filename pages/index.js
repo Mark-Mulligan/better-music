@@ -43,9 +43,20 @@ export default function Home({ artistList }) {
       </Head>
 
       <main>
-        <section className={styles.heroSection}>
-          <h1>Better Music</h1>
-        </section>
+        <div className={styles.specialBackground}>
+          <section className={styles.heroSection}>
+            <h1>Better Music</h1>
+          </section>
+
+          <section className={styles.aboutSection}>
+            <h2>About</h2>
+            <p>
+              In today&#39;s world, we have access to more music than ever before. Even so, it can be hard to find new
+              and interesting music. The goal of this website is to give you a selection artists to help you on your
+              quest for better music.
+            </p>
+          </section>
+        </div>
 
         <section className={styles.artistSection}>
           <h2>Artists</h2>

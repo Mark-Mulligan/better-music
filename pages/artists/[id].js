@@ -6,7 +6,7 @@ import styles from './id.module.css';
 import { getArtistInfo, getArtistPathParams } from '../../data';
 
 const ArtistPage = (props) => {
-  const { name, youTubeId, bio, backgroundSrc, backgroundAlt, appleMusic, spotify, youtube, instagram } = props;
+  const { id, name, youTubeId, bio, backgroundSrc, backgroundAlt, appleMusic, spotify, youtube, instagram } = props;
 
   if (!bio) {
     return <div>Not found</div>;
@@ -24,7 +24,7 @@ const ArtistPage = (props) => {
       />
       <div className={styles.wrapper}>
         <div className={styles.container}>
-          <Link href="/">
+          <Link href={`/#${id}`}>
             <a className={styles.backArrow}>
               <Image src="/icons/white-left-arrow.svg" alt="Back to home page" height={38} width={38} />
             </a>
@@ -77,10 +77,12 @@ export async function getStaticProps(context) {
     };
   }
 
-  const { name, youTubeId, bio, backgroundSrc, backgroundAlt, appleMusic, spotify, youtube, instagram } = artistData;
+  const { id, name, youTubeId, bio, backgroundSrc, backgroundAlt, appleMusic, spotify, youtube, instagram } =
+    artistData;
 
   return {
     props: {
+      id,
       name,
       youTubeId,
       bio,
