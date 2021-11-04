@@ -3,11 +3,14 @@ import { Fragment, useState, useEffect, useCallback } from 'react';
 import ArtistCard from '../components/ArtistCard';
 import CustomInput from '../components/ui/CustomInput';
 import Select from '../components/ui/Select';
+import FadeIn from '../components/ui/FadeIn';
 import { getArtistInfoForHome } from '../data';
 import { sortArtistAlphabetically, filterArtistList, filterByGenres, genreSelectOptions } from '../util/utils';
 import styles from './Home.module.css';
+import { useRouter } from 'next/dist/client/router';
 
 export default function Home({ artistList }) {
+  const router = useRouter();
   const [filteredArtists, setFilteredArtists] = useState(artistList);
   const [searchInput, setSearchInput] = useState('');
   const [artistNameOrder, setArtistNameOrder] = useState('asc');
@@ -42,7 +45,7 @@ export default function Home({ artistList }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className="fade-in">
         <section className={styles.heroSection}>
           <h1>Better Music</h1>
         </section>
@@ -57,7 +60,7 @@ export default function Home({ artistList }) {
         </section>
 
         <section className={styles.artistSection}>
-          <h2>Artists</h2>
+          <h2 id="artists">Artists</h2>
 
           <div className={styles.searchContainer}>
             <div className={styles.inputCol}>
@@ -97,13 +100,15 @@ export default function Home({ artistList }) {
             {filteredArtists.map((artist, index) => {
               return (
                 <li key={`artist-${index}`}>
-                  <ArtistCard
-                    name={artist.name}
-                    id={artist.id}
-                    genre={artist.genre}
-                    src={artist.profileSrc}
-                    alt={artist.profileAlt}
-                  />
+                  <FadeIn fadeOnLoad={router.asPath.includes('#')}>
+                    <ArtistCard
+                      name={artist.name}
+                      id={artist.id}
+                      genre={artist.genre}
+                      src={artist.profileSrc}
+                      alt={artist.profileAlt}
+                    />
+                  </FadeIn>
                 </li>
               );
             })}

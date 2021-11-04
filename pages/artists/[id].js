@@ -13,7 +13,7 @@ const ArtistPage = (props) => {
   }
 
   return (
-    <main className={styles.page}>
+    <main className={`fade-in ${styles.page}`}>
       <Image
         className={styles.backgroundImage}
         blurDataURL={backgroundSrc}

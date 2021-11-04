@@ -6,7 +6,15 @@ const ArtistCard = ({ id, name, genre, src, alt }) => {
   return (
     <div className={styles.artistCard} id={id}>
       <div className={styles.cardHeader}>
-        <Image objectFit="cover" layout="fill" objectPosition="center top" src={src} alt={alt} />
+        <Image
+          blurDataURL={src}
+          placeholder="blur"
+          objectFit="cover"
+          layout="fill"
+          objectPosition="center top"
+          src={src}
+          alt={alt}
+        />
       </div>
       <div className={styles.cardBody}>
         <h4>{name}</h4>
