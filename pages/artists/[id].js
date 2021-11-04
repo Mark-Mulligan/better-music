@@ -16,6 +16,9 @@ const ArtistPage = (props) => {
     <main className={styles.page}>
       <Image
         className={styles.backgroundImage}
+        blurDataURL={backgroundSrc}
+        placeholder="blur"
+        priority={true}
         src={backgroundSrc}
         alt={backgroundAlt}
         layout="fill"
