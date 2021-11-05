@@ -3,40 +3,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('/images/hero-background-two-min.jpg');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  position: relative;
+  overflow-x: hidden;
 }
 
-@media (max-width: 1140px) {
+.heroImageWrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(200px);
+}
+
+/* @media (max-width: 1140px) {
   .heroSection {
     background-size: cover;
   }
-}
+} */
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .heroSection {
-    height: 100vw;
+    height: 90vw;
   }
-}
 
-.titleContainer {
-  position: relative;
-  height: 100px;
-  width: 300px;
-}
-
-.titleContainer .better {
-  position: absolute;
-  bottom: -50px;
-  left: -230px;
-}
-
-.titleContainer .music {
-  position: absolute;
-  bottom: -50px;
-  right: -200px;
+  .heroImageWrapper {
+    transform: translate(20vw);
+    height: 90vw;
+  }
 }
 
 .heroSection h1 {

@@ -16,6 +16,11 @@ export default function Home({ artistList }) {
   const [searchInput, setSearchInput] = useState('');
   const [artistNameOrder, setArtistNameOrder] = useState('asc');
   const [genreList, setGenreList] = useState([]);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  const onWindowSizeChange = () => {
+    setWindowSize(window.innerWidth);
+  };
 
   const onSearchChange = (e) => {
     setSearchInput(e.target.value);
@@ -35,6 +40,12 @@ export default function Home({ artistList }) {
   }, [searchInput, artistList, artistNameOrder, genreList]);
 
   useEffect(() => {
+    window.addEventListener('resize', onWindowSizeChange);
+
+    return () => window.removeEventListener('resize', onWindowSizeChange);
+  }, []);
+
+  useEffect(() => {
     filterAndSortArtists();
   }, [searchInput, artistList, filterAndSortArtists, artistNameOrder]);
 
@@ -51,6 +62,16 @@ export default function Home({ artistList }) {
           <div className={styles.titleContainer}>
             <h1 className={styles.better}>Better</h1>
             <h1 className={styles.music}>Music</h1>
+          </div>
+          <div className={styles.heroImageWrapper}>
+            <Image
+              src="/images/hero-background-two.webp"
+              alt="Beats headphones"
+              priority={true}
+              layout="fill"
+              objectFit="contain"
+              objectPosition="top center"
+            />
           </div>
         </section>
 
