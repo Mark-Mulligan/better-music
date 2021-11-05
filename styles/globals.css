@@ -39,6 +39,12 @@ ul {
   list-style: none;
 }
 
+.highlighted {
+  font-style: italic;
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+
 .btn {
   padding: 0.4em 1.2em;
   border: 0.1em solid #e7ebef;

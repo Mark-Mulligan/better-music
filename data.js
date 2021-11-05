@@ -96,6 +96,27 @@ export const artistPageInfo = {
     of “Flintstones” and “You And I”, both from the album.`,
     ],
   },
+  jakubi: {
+    id: 'jakubi',
+    name: 'Jakubi',
+    genre: 'Pop',
+    genreIds: ['pop'],
+    profileSrc: '/images/jakubi-profile.jpeg',
+    profileAlt: 'Jakubi',
+    backgroundSrc: '/images/jakubi-background.jpeg',
+    backgroundAlt: 'The band Jakubi',
+    youTubeId: 'Nlu4pIyAtmw',
+    appleMusic: 'https://music.apple.com/us/artist/jakubi/881453221',
+    spotify: 'https://open.spotify.com/artist/71Mm7PHNOerxK5GkaT9ACY',
+    youtube: 'https://www.youtube.com/channel/UC__CKaOOITigfjPWy3YKMiQ',
+    instagram: 'https://www.instagram.com/jakubi/?hl=en',
+    bio: [
+      `Jakubi is an Aussie four-piece who write dance-heavy soul, reggae, and pop music. Half of the quartet are the brothers Farah who are deeply in sync; 
+    defining the groove that makes Jakubi stand out. Jerome rules the mic, using a talk box to texture slick runs and bold choruses into futuristic glory. 
+    The soul of the group is powered by walking bass lines and snappy backup vocals. They ventured off their island continent for the first time this year, 
+    spreading the infectious reggaeton to begging listeners in the US. Stylish, super friendly and genuine, Jakubi has a clear relationship with performing the music they’ve written.`,
+    ],
+  },
   'jordan-rakei': {
     id: 'jordan-rakei',
     name: 'Jordan Rakei',
@@ -278,6 +299,37 @@ export const artistPageInfo = {
     practicing between classes", up to the point that when Victoria moved from Dubai to Barcelona in 2013 (she was about to start 10th grade), she decided to do online 
     school instead to be able to pursue music more professionally. Her inspiration comes from unfamiliar instruments that she doesn't play as well as she does piano, 
     like the bass, loop station, harmonica, etc.`,
+    ],
+  },
+  vulpeck: {
+    id: 'vulpeck',
+    name: 'Vulpeck',
+    genre: 'Pop',
+    genreIds: ['pop'],
+    profileSrc: '/images/vulpeck-profile.jpeg',
+    profileAlt: 'The band Vulpeck',
+    backgroundSrc: '/images/vulpeck-background.png',
+    backgroundAlt: 'The band Vulpeck',
+    youTubeId: 'TiiWR6436Eg',
+    appleMusic: 'https://music.apple.com/us/artist/vulfpeck/449917675',
+    spotify: 'https://open.spotify.com/artist/7pXu47GoqSYRajmBCjxdD6',
+    youtube: 'https://www.youtube.com/c/Vulf',
+    instagram: 'https://www.instagram.com/vulfpeck/?hl=en',
+    bio: [
+      `Vulfpeck is a primarily instrumental, Los Angeles-based band inspired by the classic R&B rhythms recorded by the Funk Brothers, the Meters, 
+    and quite possibly Booker T. & the MG's.`,
+      `The founding members -- bassist Joe Dart, keyboardist Woody Goss, former My Dear Disco guitarist Theo Katzman, and keyboardist/drummer Jack Stratton
+       -- attended the University of Michigan School of Music in Ann Arbor and aligned in 2011. Vulfpeck released their debut EP, 
+       the six-track Mit Peck, by the end of the year, and went on to issue several EPs of similar length through 2014. In March of that year, 
+       they also conceived Sleepify, a shrewd and samey set that featured tracks like "Z," "Zzzzz," and the finale, "Zzzzzzzzzz." The royalties the 
+       band earned from mostly nocturnal streams of the release -- ten half-minute tracks that consisted of nothing but silence -- funded a short, 
+       admission-free U.S. tour that September before it was removed by the streaming site. "Christmas in L.A.," featuring session giant David T. Walker 
+       on guitar, was out as a single three months later.`,
+      `In 2015, Vulfpeck released their first album, Thrill of the Arts, which also featured guests including, most notably, Blake Mills. It hit the Top 20 of 
+      the Billboard R&B Albums chart and led to a performance on The Late Show with Stephen Colbert. The Beautiful Game followed in 2016 and landed on a handful 
+      of Billboard charts including R&B Albums, where it reached number six. Continuing their string of self-releases, the group issued Mr. Finish Line in 2017. 
+      It included appearances by frequent collaborators such as Antwaun Stanley and Joey Dosik, as well as Walker, drummer James Gadson, and none other than 
+      Bootsy Collins. Hill Climber, the band's eighth studio long-player, followed in December 2018. The vinyl collection Vulf Vault 001: Antwaun Stanley arrived in August 2020.`,
     ],
   },
   'yussef-dayes': {

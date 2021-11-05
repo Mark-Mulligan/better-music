@@ -74,7 +74,7 @@ export default function Home({ artistList }) {
           <p>
             In today&#39;s world, we have access to more music than ever before. Even so, it can be hard to find new and
             interesting music. The goal of this website is to give you a selection artists to help you on your quest for
-            better music.
+            <span className="highlighted"> better music.</span>
           </p>
         </section>
 
