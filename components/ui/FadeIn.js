@@ -18,7 +18,7 @@ const FadeIn = (props) => {
     let nodeCopy = domRef.current;
 
     return () => observer.unobserve(nodeCopy);
-  }, [props.fadeOnLoad]);
+  }, []);
 
   return (
     <div ref={domRef}>

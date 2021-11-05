@@ -16,6 +16,7 @@ export default function Home({ artistList }) {
   const [searchInput, setSearchInput] = useState('');
   const [artistNameOrder, setArtistNameOrder] = useState('asc');
   const [genreList, setGenreList] = useState([]);
+  const [fadeOnLoad, setFadeOnLoad] = useState(router.asPath.includes('#'));
 
   const onSearchChange = (e) => {
     setSearchInput(e.target.value);
@@ -36,6 +37,7 @@ export default function Home({ artistList }) {
 
   useEffect(() => {
     filterAndSortArtists();
+    setFadeOnLoad(false);
   }, [searchInput, artistList, filterAndSortArtists, artistNameOrder]);
 
   return (
@@ -119,7 +121,7 @@ export default function Home({ artistList }) {
             {filteredArtists.map((artist, index) => {
               return (
                 <li key={`artist-${index}`}>
-                  <FadeIn fadeOnLoad={router.asPath.includes('#')}>
+                  <FadeIn fadeOnLoad={fadeOnLoad}>
                     <ArtistCard
                       name={artist.name}
                       id={artist.id}
@@ -134,16 +136,16 @@ export default function Home({ artistList }) {
           </ul>
         </section>
 
-        <section className={styles.footer}>
+        <footer className={styles.footer}>
           <div className={styles.creditContainer}>
             <p>
-              Website create by{' '}
+              Website created by{' '}
               <a href="https://www.mulligandesigns.com" target="_black" rel="noreferrer">
                 mulligandesigns.com
               </a>
             </p>
           </div>
-        </section>
+        </footer>
       </main>
     </Fragment>
   );
