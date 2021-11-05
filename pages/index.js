@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Fragment, useState, useEffect, useCallback } from 'react';
+import { Fragment, useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import ArtistCard from '../components/ArtistCard';
 import CustomInput from '../components/ui/CustomInput';
@@ -16,11 +16,6 @@ export default function Home({ artistList }) {
   const [searchInput, setSearchInput] = useState('');
   const [artistNameOrder, setArtistNameOrder] = useState('asc');
   const [genreList, setGenreList] = useState([]);
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
-
-  const onWindowSizeChange = () => {
-    setWindowSize(window.innerWidth);
-  };
 
   const onSearchChange = (e) => {
     setSearchInput(e.target.value);
@@ -40,12 +35,6 @@ export default function Home({ artistList }) {
   }, [searchInput, artistList, artistNameOrder, genreList]);
 
   useEffect(() => {
-    window.addEventListener('resize', onWindowSizeChange);
-
-    return () => window.removeEventListener('resize', onWindowSizeChange);
-  }, []);
-
-  useEffect(() => {
     filterAndSortArtists();
   }, [searchInput, artistList, filterAndSortArtists, artistNameOrder]);
 
@@ -53,18 +42,16 @@ export default function Home({ artistList }) {
     <Fragment>
       <Head>
         <title>Better Music</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="A great source for finding amazing selection of music." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="fade-in">
         <section className={styles.heroSection}>
-          <div className={styles.titleContainer}>
-            <h1 className={styles.better}>Better</h1>
-            <h1 className={styles.music}>Music</h1>
-          </div>
           <div className={styles.heroImageWrapper}>
             <Image
+              className={styles.heroImage}
               src="/images/hero-background-two.webp"
               alt="Beats headphones"
               priority={true}
@@ -72,6 +59,12 @@ export default function Home({ artistList }) {
               objectFit="contain"
               objectPosition="top center"
             />
+            <div className={styles.titleContainer}>
+              <div>
+                <h1>Better</h1>
+                <h1>Music</h1>
+              </div>
+            </div>
           </div>
         </section>
 
