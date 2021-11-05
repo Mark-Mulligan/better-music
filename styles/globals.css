@@ -8,6 +8,18 @@ body {
     Helvetica Neue, sans-serif;
 }
 
+@media (max-width: 815px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 13px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }

@@ -62,6 +62,15 @@
   .linksContainer {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
+
+  .wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .container {
+    border-radius: 0;
+  }
 }
 
 .linksContainer li {

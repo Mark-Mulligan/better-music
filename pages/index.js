@@ -49,6 +49,13 @@ export default function Home({ artistList }) {
 
       <main className="fade-in">
         <section className={styles.heroSection}>
+          <div className={styles.titleContainer}>
+            <div>
+              <h1>Better</h1>
+              <h1>Music</h1>
+            </div>
+          </div>
+
           <div className={styles.heroImageWrapper}>
             <Image
               className={styles.heroImage}
@@ -56,15 +63,9 @@ export default function Home({ artistList }) {
               alt="Beats headphones"
               priority={true}
               layout="fill"
-              objectFit="contain"
+              objectFit="cover"
               objectPosition="top center"
             />
-            <div className={styles.titleContainer}>
-              <div>
-                <h1>Better</h1>
-                <h1>Music</h1>
-              </div>
-            </div>
           </div>
         </section>
 

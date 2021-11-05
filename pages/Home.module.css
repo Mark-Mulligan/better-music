@@ -1,111 +1,90 @@
 .heroSection {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: auto;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
+}
+
+.heroImageWrapper {
+  height: 800px;
+  width: 800px;
+  margin: auto;
+  position: relative;
+  left: 200px;
 }
 
 .titleContainer {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
   width: 100%;
+  text-align: center;
   z-index: 1;
+  font-size: 64px;
+  top: 300px;
 }
 
 .titleContainer div {
-  transform: translate(-370px, 10px);
+  display: inline-block;
+  text-align: left;
+  transform: translateX(-175px);
 }
 
 .titleContainer h1 {
-  font-size: 4rem;
   margin-top: 0;
   margin-bottom: 4px;
 }
 
-.heroImageWrapper {
-  position: relative;
-  left: 200px;
-  height: 100%;
-  width: 100%;
-}
-
-@media (max-width: 1440px) {
-  .titleContainer div {
-    transform: translate(calc(-140px - 15vw), calc(35vw - 500px));
-  }
-}
-
-@media (max-width: 1100px) {
+@media (max-width: 815px) {
   .heroSection {
-    height: 75vh;
-  }
-
-  .titleContainer h1 {
-    font-size: 3.8rem;
-  }
-
-  .titleContainer div {
-    transform: translate(calc(-140px - 15vw), calc(35vw - 380px));
-  }
-}
-
-@media (max-width: 800px) {
-  .heroSection {
-    height: 50vh;
+    min-height: auto;
   }
 
   .heroImageWrapper {
-    top: 100px;
-    left: 20vw;
     height: 600px;
     width: 600px;
+    left: 150px;
   }
 
-  .heroImage {
-    min-width: auto !important;
-    max-width: none !important;
-    min-height: auto !important;
-    height: 600px !important;
-    width: 600px !important;
-  }
-
-  .titleContainer h1 {
-    font-size: 3.5rem;
+  .titleContainer {
+    top: 225px;
+    font-size: 48px;
   }
 
   .titleContainer div {
-    transform: translate(-210px, -100px);
+    transform: translateX(-131px);
   }
 }
 
-@media (max-width: 625px) {
-  .titleContainer div {
-    transform: translate(-33vw, -100px);
-  }
-}
-
-@media (max-width: 575px) {
-  .titleContainer h1 {
-    font-size: 3.2rem;
-  }
-
+@media (max-width: 615px) {
   .heroImageWrapper {
-    left: 20px;
-    top: 0;
-    width: 100%;
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
+    left: 100px;
+  }
+
+  .titleContainer {
+    top: 150px;
+    font-size: 32px;
   }
 
   .titleContainer div {
-    position: absolute;
-    left: 175px;
-    transform: translate(-150px, -40px);
+    transform: translateX(-87px);
+  }
+}
+
+@media (max-width: 400px) {
+  .heroImageWrapper {
+    height: 350px;
+    width: 350px;
+    left: 87px;
+  }
+
+  .titleContainer {
+    top: 131px;
+    font-size: 28px;
+  }
+
+  .titleContainer div {
+    transform: translateX(-76px);
   }
 }
 
