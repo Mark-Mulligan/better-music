@@ -20,6 +20,37 @@
   padding: 7px 0;
   background: transparent;
   transition: border-color 0.2s;
+
+  &:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image-slice: 1;
+  }
+
+  &:focus + .formLabel {
+    position: absolute;
+    top: -13px;
+    left: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  &:valid {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image-slice: 1;
+  }
+
+  &valid + .formLabel {
+    top: -13px;
+    left: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
 }
 
 .formLabel {
@@ -29,39 +60,5 @@
   display: block;
   transition: 0.2s;
   font-size: 1.2rem;
-  color: blue;
-}
-
-.formField:focus + .formLabel {
-  position: absolute;
-  top: -13px;
-  left: 0;
-  display: block;
-  transition: 0.2s;
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
-.formField:valid + .formLabel {
-  top: -13px;
-  left: 0;
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: blue;
-}
-
-.formField:focus {
-  padding-bottom: 6px;
-  font-weight: 700;
-  border-width: 3px;
-  border-color: $lightColor;
-  border-image-slice: 1;
-}
-
-.formField:valid {
-  padding-bottom: 6px;
-  font-weight: 700;
-  border-width: 3px;
-  border-color: $lightColor;
-  border-image-slice: 1;
+  color: $lightColor;
 }
