@@ -1,5 +1,19 @@
 @import './Variables.scss';
 
+@mixin input-focused() {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image-slice: 1;
+}
+
+@mixin form-label-focused() {
+  top: -13px;
+  left: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 .inputWrapper {
   min-height: 40px;
 }
@@ -22,34 +36,22 @@
   transition: border-color 0.2s;
 
   &:focus {
-    padding-bottom: 6px;
-    font-weight: 700;
-    border-width: 3px;
-    border-image-slice: 1;
+    @include input-focused();
   }
 
   &:focus + .formLabel {
+    @include form-label-focused();
     position: absolute;
-    top: -13px;
-    left: 0;
     display: block;
     transition: 0.2s;
-    font-size: 0.9rem;
-    font-weight: 700;
   }
 
   &:valid {
-    padding-bottom: 6px;
-    font-weight: 700;
-    border-width: 3px;
-    border-image-slice: 1;
+    @include input-focused();
   }
 
-  &valid + .formLabel {
-    top: -13px;
-    left: 0;
-    font-size: 0.9rem;
-    font-weight: 700;
+  &:valid + .formLabel {
+    @include form-label-focused();
   }
 }
 
