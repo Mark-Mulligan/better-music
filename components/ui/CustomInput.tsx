@@ -1,6 +1,14 @@
-import styles from './CustomInput.module.css';
+import styles from '../../styles/CustomInput.module.scss';
 
-const CustomInput = ({ label, name, id, value, onSearchChange }) => {
+interface CustomInputProps {
+  label: string;
+  name: string;
+  id: string;
+  value: string;
+  onSearchChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const CustomInput = ({ label, name, id, value, onSearchChange }: CustomInputProps) => {
   return (
     <div className={styles.inputWrapper}>
       <div className={styles.formGroup}>

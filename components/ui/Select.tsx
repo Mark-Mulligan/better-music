@@ -1,9 +1,16 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, MouseEventHandler } from 'react';
 import Image from 'next/image';
-import styles from './Select.module.css';
+import styles from '../../styles/Select.module.scss';
+import { SelectOption } from '../../util/util';
 
-const Select = ({ options, selectedOptions, setSelectOptions }) => {
-  const selectNode = useRef();
+interface SelectProps {
+  options: Array<SelectOption>;
+  selectedOptions: Array<SelectOption>;
+  setSelectOptions: (selectedOptions: Array<SelectOption>) => void;
+}
+
+const Select = ({ options, selectedOptions, setSelectOptions }: SelectProps) => {
+  const selectNode = useRef<HTMLFormElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -14,15 +21,15 @@ const Select = ({ options, selectedOptions, setSelectOptions }) => {
     };
   }, []);
 
-  const handleOustideClick = (e) => {
-    if (selectNode.current.contains(e.target)) {
+  const handleOustideClick = (e: Event) => {
+    if (selectNode.current && e.target && selectNode.current.contains(e.target as Node)) {
       return;
     }
 
     setMenuOpen(false);
   };
 
-  const handleOptionClick = (selectedItem) => {
+  const handleOptionClick = (selectedItem: SelectOption) => {
     let selectedItems = [...selectedOptions];
     let removeItem = false;
     let deleteIndex = 0;
@@ -43,7 +50,7 @@ const Select = ({ options, selectedOptions, setSelectOptions }) => {
     setMenuOpen(!menuOpen);
   };
 
-  const handleChipToggle = (e, selectedItem) => {
+  const handleChipToggle = (e: React.MouseEvent<HTMLSpanElement>, selectedItem: SelectOption) => {
     e.stopPropagation();
     let selectedItems = [...selectedOptions];
 
@@ -56,7 +63,7 @@ const Select = ({ options, selectedOptions, setSelectOptions }) => {
     }
   };
 
-  const isOptionSelected = (option, selectedOptionsArr) => {
+  const isOptionSelected = (option: SelectOption, selectedOptionsArr: Array<SelectOption>) => {
     for (let i = 0; i < selectedOptionsArr.length; i++) {
       if (selectedOptionsArr[i]['value'] === option.value) {
         return true;

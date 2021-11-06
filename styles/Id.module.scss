@@ -1,0 +1,81 @@
+.page {
+  height: 100vh;
+  position: relative;
+}
+
+.wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.backgroundImage {
+  z-index: 0;
+}
+
+.backArrow {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  max-width: 1000px;
+  padding: 30px;
+  padding-bottom: 50px;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(10, 10, 10, 0.9);
+  color: rgb(245, 245, 245);
+}
+
+.container h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.container p {
+  text-align: justify;
+  line-height: 1.7;
+}
+
+.videoWrapper {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.linksContainer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+
+@media (max-width: 600px) {
+  .linksContainer {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .container {
+    border-radius: 0;
+  }
+}
+
+.linksContainer li {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

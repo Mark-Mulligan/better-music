@@ -1,8 +1,16 @@
 import Image from 'next/image';
-import styles from './ArtistCard.module.css';
+import styles from '../styles/ArtistCard.module.scss';
 import Link from 'next/link';
 
-const ArtistCard = ({ id, name, genre, src, alt }) => {
+interface ArtistCardProps {
+  id: string;
+  name: string;
+  genre: string;
+  src: string;
+  alt: string;
+}
+
+const ArtistCard = ({ id, name, genre, src, alt }: ArtistCardProps) => {
   return (
     <div className={styles.artistCard} id={id}>
       <div className={styles.cardHeader}>

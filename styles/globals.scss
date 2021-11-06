@@ -1,0 +1,110 @@
+@import './Variables.scss';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: black;
+  color: $lightColor;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+}
+
+@media (max-width: 815px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.highlighted {
+  font-style: italic;
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+
+.btn {
+  padding: 0.4em 1.2em;
+  border: 0.1em solid $lightColor;
+  background: $lightColor;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: black;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.btn-outline {
+  background: none;
+  color: $lightColor;
+}
+
+.block {
+  display: block;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #c8cccf;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: $lightColor;
+  cursor: pointer;
+  color: black;
+}
+
+.btn-dark {
+  background: black;
+  color: white;
+}
+
+.btn-dark:hover {
+  background: rgb(40, 40, 40);
+  color: white;
+}
+
+.relative {
+  position: relative;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

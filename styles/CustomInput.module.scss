@@ -1,3 +1,5 @@
+@import './Variables.scss';
+
 .inputWrapper {
   min-height: 40px;
 }
@@ -11,10 +13,10 @@
   font-family: inherit;
   width: 100%;
   border: 0;
-  border-bottom: 2px solid #e7ebef;
+  border-bottom: 2px solid $lightColor;
   outline: 0;
   font-size: 1.3rem;
-  color: #e7ebef;
+  color: $lightColor;
   padding: 7px 0;
   background: transparent;
   transition: border-color 0.2s;
@@ -27,7 +29,7 @@
   display: block;
   transition: 0.2s;
   font-size: 1.2rem;
-  color: #e7ebef;
+  color: blue;
 }
 
 .formField:focus + .formLabel {
@@ -37,7 +39,6 @@
   display: block;
   transition: 0.2s;
   font-size: 0.9rem;
-  color: #e7ebef;
   font-weight: 700;
 }
 
@@ -45,15 +46,15 @@
   top: -13px;
   left: 0;
   font-size: 0.9rem;
-  color: #e7ebef;
   font-weight: 700;
+  color: blue;
 }
 
 .formField:focus {
   padding-bottom: 6px;
   font-weight: 700;
   border-width: 3px;
-  border-color: #e7ebef;
+  border-color: $lightColor;
   border-image-slice: 1;
 }
 
@@ -61,7 +62,6 @@
   padding-bottom: 6px;
   font-weight: 700;
   border-width: 3px;
-  /* border-image: linear-gradient(to right, #e7ebef, #69b7ff); */
-  border-color: #e7ebef;
+  border-color: $lightColor;
   border-image-slice: 1;
 }

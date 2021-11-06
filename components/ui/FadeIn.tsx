@@ -1,23 +1,38 @@
 import { useEffect, useRef, useState } from 'react';
-import styles from './FadeIn.module.css';
+import styles from '../../styles/FadeIn.module.scss';
 
-const FadeIn = (props) => {
+interface FadeInProps {
+  fadeOnLoad: boolean;
+  children: JSX.Element;
+}
+
+const FadeIn = (props: FadeInProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const domRef = useRef();
+  const domRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       if (props.fadeOnLoad || entries[0].intersectionRatio > 0 || entries[0].intersectionRatio < 0) {
         setIsVisible(true);
-        observer.unobserve(domRef.current);
+
+        if (domRef.current) {
+          observer.unobserve(domRef.current);
+        }
       }
     });
 
-    observer.observe(domRef.current);
+    if (domRef.current) {
+      observer.observe(domRef.current);
+    }
+
     let nodeCopy = domRef.current;
 
-    return () => observer.unobserve(nodeCopy);
+    return () => {
+      if (nodeCopy) {
+        observer.unobserve(nodeCopy);
+      }
+    };
   }, []);
 
   return (
