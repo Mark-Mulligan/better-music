@@ -1,4 +1,25 @@
-export const artistPageInfo = {
+export interface ArtistInfo {
+  id: string;
+  name: string;
+  genre: string;
+  genreIds: string[];
+  profileSrc: string;
+  profileAlt: string;
+  backgroundSrc: string;
+  backgroundAlt: string;
+  youTubeId: string;
+  appleMusic: string;
+  spotify: string;
+  youtube: string;
+  instagram: string;
+  bio: string[];
+}
+
+export interface AllArtistData {
+  [key: string]: ArtistInfo;
+}
+
+export const artistPageInfo: AllArtistData = {
   chon: {
     id: 'chon',
     name: 'Chon',
@@ -365,7 +386,7 @@ export const getArtistPathParams = () => {
   return paths;
 };
 
-export const getArtistInfoForHome = () => {
+export const getArtistInfoForHome = (): Array<Partial<ArtistInfo>> => {
   let artistList = [];
   for (const artist in artistPageInfo) {
     const { id, name, genre, genreIds, profileSrc, profileAlt } = artistPageInfo[artist];
@@ -374,6 +395,6 @@ export const getArtistInfoForHome = () => {
   return artistList;
 };
 
-export const getArtistInfo = (artistId) => {
+export const getArtistInfo = (artistId: string) => {
   return artistPageInfo[artistId];
 };
