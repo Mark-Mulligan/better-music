@@ -56,6 +56,13 @@
 .linksContainer {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+
+  li {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 600px) {
@@ -71,11 +78,4 @@
   .container {
     border-radius: 0;
   }
-}
-
-.linksContainer li {
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

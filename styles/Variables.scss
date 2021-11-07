@@ -1,2 +1,22 @@
 // Colors
 $lightColor: #e7ebef;
+
+// Mixins
+@mixin secondary-title() {
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+@mixin input-focused() {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image-slice: 1;
+}
+
+@mixin form-label-focused() {
+  top: -13px;
+  left: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
