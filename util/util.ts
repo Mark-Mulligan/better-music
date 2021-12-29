@@ -14,6 +14,7 @@ export const genreSelectOptions: SelectOption[] = [
   { value: 'pop', label: 'Pop' },
   { value: 'rock', label: 'Rock' },
   { value: 'dance/electronic', label: 'Dance/Electronic' },
+  { value: 'hip-hop', label: 'Hip Hop' },
 ];
 
 export const sortArtistAlphabetically = (artistList: Partial<ArtistInfo>[], order: 'asc' | 'desc') => {

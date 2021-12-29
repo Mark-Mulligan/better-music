@@ -235,6 +235,47 @@ export const artistPageInfo: AllArtistData = {
     During the 2019 Little Ghost US Tour, the band used their platform to promote local charities in each city they played in.`,
     ],
   },
+  'robert-glasper': {
+    id: 'robert-glasper',
+    name: 'Robert Glasper',
+    genre: 'Jazz/Hip-hop/Neo-Soul',
+    genreIds: ['jazz', 'r&b/soul', 'hip-hop'],
+    profileSrc: '/images/robert-glasper-profile.jpg',
+    profileAlt: 'Robert Glasper Profile Picture',
+    backgroundSrc: '/images/robert-glasper-background.webp',
+    backgroundAlt: 'Robert Glasper playing piano on stage.',
+    youTubeId: 'oGTVoX7AaRc',
+    appleMusic: 'https://music.apple.com/us/artist/robert-glasper/4643652',
+    spotify: 'https://open.spotify.com/artist/5cM1PvItlR21WUyBnsdMcn',
+    youtube: 'https://www.youtube.com/user/robertglasper',
+    instagram: 'https://www.instagram.com/robertglasper/?hl=en',
+    bio: [
+      `Hailing from Houston, Texas, Robert Glasper is a jazz pianist with a knack for mellow, harmonically complex compositions that also reveal a subtle hip-hop influence. 
+    Inspired to play piano by his mother, a gospel pianist and vocalist, Glasper attended Houston’s High School for the Performing Arts. After graduation, 
+    he studied music at the New School University in Manhattan, where he found performance work with such luminaries as bassist Christian McBride, saxophonist Kenny Garrett, 
+    and others. After graduating college, Glasper worked with a variety of artists, including trumpeter Roy Hargrove, vocalist Carly Simon, and rapper Mos Def. 
+    The pianist released his debut album, Mood, on Fresh Sound New Talent in 2004. Canvas and In My Element followed in 2005 and 2007, respectively, on Blue Note Records.`,
+      `In 2009, Glasper released the forward-thinking album Double Booked, which featured a mix of modal post-bop and funky, ’80s Herbie Hancock-inspired numbers with two separate bands. 
+   The first of these was his trio with drummer Chris Dave and upright bassist Vicente Archer; they recorded five originals and a cover of Thelonious Monk’s “Think of One.” 
+   These tracks were followed by five more originals by his electric band, dubbed the Robert Glasper Experiment, featuring Dave, electric bassist Derrick Hodge, 
+   and Casey Benjamin on saxes and vocoder.`,
+      `Three years later, the Robert Glasper Experiment (with a slew of guest vocalists) issued their first stand-alone album, 
+   Black Radio, for Blue Note, which sought to blur the boundaries between jazz, hip-hop, R&B, and rock & roll. It entered the jazz chart at number one and went on to win a 
+   Grammy Award for Best R&B Album. Later in the year, Glasper and Blue Note released Black Radio Recovered: The Remix EP. 9th Wonder, Georgia Anne Muldrow, 
+   and Pete Rock were among those who participated. The following year, the Robert Glasper Experiment (then including Hodge and Benjamin with drummer Mark Colenburg) 
+   returned with their equally star-studded sophomore album, Black Radio 2. It also won a Grammy, this time for Best Traditional R&B Performance for a cover of Stevie Wonder’s 
+   “Jesus Children of America.”`,
+      `Glasper returned to his original acoustic piano trio format with bassist Archer and drummer Damion Reid. They cut 2015’s Covered 
+   live at Capitol Studios in front of an invited audience. The album’s pre-release single was a reading of Radiohead’s “Reckoner”; 
+   it was released in April, followed by the album in June. Glasper also played on Kendrick Lamar’s celebrated To Pimp a Butterfly and Maxwell’s blackSUMMERS’night. 
+   For Don Cheadle’s 2016 Miles Davis biopic, Miles Ahead, the pianist curated the soundtrack and wrote original music, which included contributions from Wayne Shorter, 
+   Herbie Hancock, and Gary Clark, Jr. Glasper also recorded Everything’s Beautiful, a Davis tribute album in celebration of the trumpeter’s 90th birthday. 
+   Glasper reimagined classic tracks with an all-star list of collaborators who included Wonder, Muldrow, Erykah Badu, Hiatus Kaiyote, and John Scofield. 
+   Featuring the single “Ghetto Walkin'” fronted by Bilal, the album was issued that May. the Robert Glasper Experiment returned to the studio in early 2016 with a different m.o. 
+   Instead of working on the pianist’s music or covers, the quartet members wrote and arranged together in the studio for the first time. The resulting Artscience was 
+   issued in September after the pre-release singles “Day to Day” and “Thinkin’ About You.” ~ Matt Collar & Thom Jurek`,
+    ],
+  },
   'snarky-puppy': {
     id: 'snarky-puppy',
     name: 'Snarky Puppy',
