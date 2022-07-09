@@ -155,8 +155,8 @@ const Home: NextPage<HomePageProps> = ({ artistList }) => {
           <div className={styles.creditContainer}>
             <p>
               Website created by{' '}
-              <a href="https://www.mulligandesigns.com" target="_black" rel="noreferrer">
-                mulligandesigns.com
+              <a href="https://markmulligan.dev" target="_black" rel="noreferrer">
+                Mark Mulligan
               </a>
             </p>
           </div>
